@@ -1,0 +1,924 @@
+/* About section tablet styles */
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+  }
+
+/* Logo id */
+#logo{
+    width: 25px; /* Logo starts from the width of 25px */
+    z-index: 10; /* Logo has a z-index of 10 */
+}
+
+/* Body - Updated for proper footer positioning */
+body {
+    background-color: #F9F9F9;
+    font-family: "Nunito Sans", sans-serif; /* default paragraph font */
+    margin: 0;
+    padding: 0; /* Remove padding to fix footer positioning */
+    min-height: 100vh; /* Ensure body takes full viewport height */
+    display: flex;
+    flex-direction: column; /* Change to column layout */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif;
+    color: #34568B; /* Brand color for all headings */
+} /* header fonts */
+
+/* Center paragraphs that directly follow h1 and h2 - with higher specificity */
+main h1 + p, main h2 + p {
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    color: #34568B; /* Brand color for paragraphs following main headings */
+    font-size: 1.3rem !important; /* Larger, more prominent size */
+    font-weight: 400; /* Slightly bolder for better readability */
+}
+
+/* Enhanced styling specifically for the hero paragraph (h1 + p) */
+main h1 + p {
+    font-size: 1.3rem !important; /* Moderately larger for hero */
+    font-weight: 500 !important; /* Medium weight - less heavy */
+    font-family: "Montserrat", sans-serif !important; /* Use heading font */
+    letter-spacing: 0.5px; /* Slight spacing for elegance */
+    max-width: 900px; /* Slightly wider for hero */
+    margin-bottom: 3rem !important; /* More space after hero */
+}
+
+/* Main Header - Updated for sticky navigation */
+body > header {
+    display: flex;
+    flex-direction: row; /* Change to horizontal layout */
+    justify-content: space-between; /* Logo on left, nav on right */
+    align-items: center; /* Vertically center items */
+    background: #F9F9F9;
+    border-bottom: 3px solid #34568B;
+    margin-bottom: 20px;
+    padding: 15px 20px; /* Horizontal padding for mobile */
+    position: sticky; /* Make header sticky */
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1000; /* High z-index to stay above other content */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow when sticky */
+}
+
+/* Main content - Updated */
+main {
+    flex: 1; /* Take up remaining space */
+    padding: 0 40px; /* Add horizontal padding */
+    max-width: 1200px; /* Optional: limit max width */
+    margin: 0 auto; /* Center the main content */
+    width: 100%;
+}
+
+/* Navigation container */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation links - Updated for horizontal layout */
+.nav_links {
+    display: flex;
+    flex-direction: row; /* Horizontal layout */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 15px; /* Mobile-first: smaller gap between links */
+    color: #34568B;
+}
+
+/* Navigation items */
+.nav_item {
+    margin: 0;
+}
+
+/* Navigation link styling */
+.nav_links li a,
+.nav_links li a:visited {
+    color: #34568B; /* Updated to match your brand color */
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem; /* Mobile-first: smaller font */
+    padding: 8px 12px; /* Mobile-first: smaller padding */
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Navigation hover effects */
+.nav_links li a:hover {
+    background-color:  #34818B;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Active/Current page styling (optional) */
+.nav_links li a.active {
+    background-color: #34818B;
+    color: #fff;
+}
+
+/* Container for cards */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Individual card - Mobile first base styles */
+.card {
+  background: #fff;
+  border-radius: 20px;
+  flex: 1 1 280px; /* Mobile-first: smaller minimum width */
+  max-width: 100%; /* Full width on mobile */
+  min-height: 520px; /* Mobile-first: smaller height */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(52, 86, 139, 0.1);
+  transition: all 0.3s ease-in-out;
+  margin: 10px 5px; /* Mobile-first: smaller side margins */
+}
+
+/* Hover effect (optional on mobile) */
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Card header - Mobile first */
+.card > header {
+  background: #fff;
+  border-bottom: 3px solid #34568B;
+  padding: 16px 12px; /* Mobile-first: smaller padding */
+  text-align: center;
+  min-height: 50px; /* Mobile-first: smaller header height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card header h4 {
+  color: #34568B;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  font-weight: 600;
+  font-size: 1rem; /* slightly smaller font */
+}
+
+/* Mockup image - Mobile first */
+.card img.mockup {
+  width: 100%;
+  height: 160px; /* Mobile-first: smaller height */
+  object-fit: cover;
+  margin: 12px 0; /* Mobile-first: smaller margins */
+  border-radius: 8px; /* Mobile-first: smaller radius */
+  padding: 0 12px; /* Mobile-first: smaller padding */
+  box-sizing: border-box;
+}
+
+/* List inside card - Mobile first */
+.card ul {
+  padding: 12px 20px; /* Mobile-first: smaller padding */
+  margin: 0;
+  color: #333;
+  line-height: 1.5;
+  font-size: 0.9rem; /* Mobile-first: smaller font */
+  list-style-type: disc;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.card ul li {
+  margin-bottom: 8px;
+}
+
+/* Button styling - Mobile first */
+.card button {
+  background-color: #34568B;
+  color: #fff;
+  border: none;
+  border-radius: 22px; /* Mobile-first: smaller radius */
+  padding: 10px 20px; /* Mobile-first: smaller padding */
+  margin: 15px 15px 20px 15px; /* Mobile-first: smaller margins */
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem; /* Mobile-first: smaller font */
+  transition: all 0.3s ease;
+  margin-top: auto;
+  align-self: stretch;
+}
+
+.card button:hover {
+  background-color: #34818B;
+}
+
+/* Projects class */
+.projects{
+    display: flex; /* enables flexbox display */
+    flex-flow: row wrap; /* arrange items in row and wraps them */
+    justify-content: center; /* centers content horizontally in the container */
+}
+
+/* TIMELINE STYLES */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 2rem auto 3rem auto;
+  padding: 0 20px;
+}
+
+/* Timeline vertical line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #3498db, #34568B);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+  padding-left: 80px;
+}
+
+/* Timeline marker (dot) */
+.timeline-marker {
+  position: absolute;
+  left: -50px;
+  top: 5px;
+  width: 16px;
+  height: 16px;
+  background: #34568B;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #3498db;
+  z-index: 2;
+}
+
+.timeline-content {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #3498db;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Timeline arrow */
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid #3498db;
+}
+
+.timeline-header h4 {
+  color: #34568B;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.timeline-company {
+  display: block;
+  color: #555;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.timeline-duration {
+  display: inline-block;
+  background: #f8f9fa;
+  color: #666;
+  font-size: 0.85rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.timeline-content p {
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* ABOUT SECTION STYLES */
+.about-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+}
+
+.about-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.about h3 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* Center the paragraphs in the "Through My Lens" section */
+.about > p {
+  text-align: center;
+  font-size: 1.1rem !important; /* Larger, more readable size to match h2 paragraphs */
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Gallery class */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Gallery figures */
+.gallery figure {
+  margin: 0;
+  width: 300px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #f8f9fa;
+}
+
+.gallery figure:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Images in Gallery */
+.gallery img {
+  width: 100%;
+  height: auto; /* Let height adjust to maintain aspect ratio */
+  min-height: 200px; /* Minimum height to maintain consistency */
+  max-height: 300px; /* Maximum height to prevent very tall images */
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery figure:hover img {
+  transform: scale(1.05);
+}
+
+/* Gallery captions */
+.gallery figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: white;
+  padding: 15px;
+  font-size: 0.9rem;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.gallery figure:hover figcaption {
+  transform: translateY(0);
+}
+
+/* Contact section styles */
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.contact-button {
+  background-color: #34568B;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.contact-button:hover {
+  background-color: #34818B;
+  transform: translateY(-2px);
+}
+
+/* Footer - Updated and simplified */
+footer {
+  background-color: #34568B;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 0;
+  padding: 0;
+}
+
+/* HERO SECTION WHITE SPACE ENHANCEMENT */
+/* Reduced viewport hero section - less white space */
+.home {
+  min-height: 70vh; /* Reduced from 100vh to 70vh */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Changed from center to flex-start */
+  align-items: center;
+  padding: 40px 0 60px 0; /* Less top padding, more bottom for arrow */
+  position: relative; /* CRITICAL: This makes the arrow position relative to this section */
+  padding-top: 40px; /* Specific top padding control */
+}
+
+/* Add more space before the Recent Projects section */
+#projects {
+  margin-top: 40px; /* Reduced spacing */
+  padding-top: 20px; /* Reduced padding */
+}
+
+/* Scroll text styling - positioned above arrow */
+.scroll-text {
+  position: absolute;
+  bottom: 80px; /* Above the arrow */
+  left: 50%;
+  transform: translateX(-50%);
+  color: #34568B;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin: 0;
+  opacity: 0.8;
+  animation: fadeInOut 3s infinite;
+  text-align: center;
+}
+
+/* Fade animation for scroll text */
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+/* Animated arrow using SVG - trying different path */
+.scroll-arrow {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 32px; /* Made bigger */
+  height: 32px; /* Made bigger */
+  background-image: url('../images/arrow.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  animation: bounce 2s infinite;
+  opacity: 0.8;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.scroll-arrow:hover {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-3px);
+}
+
+/* Bouncing animation for the arrow */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-6px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-3px);
+  }
+}
+
+/* RESPONSIVE STYLES */
+
+/* Small tablets and larger phones (min-width: 480px) */
+@media screen and (min-width: 480px) {
+  .projects {
+    gap: 18px;
+    padding: 18px 0;
+  }
+  
+  .card {
+    flex: 1 1 300px;
+    min-height: 550px;
+    margin: 8px;
+  }
+  
+  .card img.mockup {
+    height: 180px;
+    margin: 14px 0;
+    padding: 0 14px;
+  }
+  
+  .gallery figure {
+    width: 280px;
+  }
+  
+  .gallery img {
+    height: auto; /* Let height adjust naturally on mobile */
+    min-height: 150px;
+    max-height: 250px;
+  }
+}
+
+/* Tablets (min-width: 768px) */
+@media screen and (min-width: 768px) {
+  body > header {
+    padding: 20px 40px;
+  }
+  
+  .nav_links {
+    gap: 25px;
+  }
+  
+  .nav_links li a {
+    font-size: 1rem;
+    padding: 10px 16px;
+  }
+
+  main h1 + p {
+        font-size: 1.5rem !important;
+        letter-spacing: 0.8px;
+        max-width: 1000px;
+  }
+
+  
+  .projects {
+    gap: 25px;
+    padding: 25px 0;
+  }
+  
+  .card {
+    flex: 1 1 320px;
+    max-width: 400px;
+    min-height: 580px;
+    margin: 10px;
+  }
+  
+  .card > header {
+    padding: 18px 15px;
+    min-height: 55px;
+  }
+  
+  .card header h4 {
+    font-size: 1.05rem;
+  }
+  
+  .card img.mockup {
+    height: 190px;
+    margin: 15px 0;
+    border-radius: 10px;
+    padding: 0 15px;
+  }
+  
+  .card ul {
+    padding: 14px 22px;
+    font-size: 0.92rem;
+  }
+  
+  .card ul li {
+    margin-bottom: 11px;
+  }
+  
+  .card button {
+    padding: 11px 22px;
+    font-size: 0.92rem;
+    border-radius: 24px;
+    margin: 18px 18px 22px 18px;
+  }
+  
+  /* Experience section tablet styles */
+  .experience-item {
+    padding: 22px;
+  }
+  
+  .experience-header h3 {
+    font-size: 1.25rem;
+  }
+  
+  .company {
+    font-size: 1rem;
+  }
+  
+  .experience-details {
+    font-size: 0.93rem;
+  }
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+  }
+  
+  /* Hero section tablet styles */
+  .home {
+    padding: 100px 0;
+  }
+  
+  #projects {
+    margin-top: 140px;
+    padding-top: 80px;
+  }
+  
+  .scroll-text {
+    bottom: 120px;
+    font-size: 1rem;
+  }
+  
+  .scroll-arrow {
+    bottom: 80px;
+    width: 40px; /* Even bigger on desktop */
+    height: 40px; /* Even bigger on desktop */
+  }
+}
+
+/* Desktop (min-width: 1024px) */
+@media screen and (min-width: 1024px) {
+  body > header {
+    padding: 25px 60px;
+  }
+  
+  #logo {
+    width: 30px;
+  }
+  
+  .nav_links {
+    gap: 35px;
+  }
+  
+  .nav_links li a {
+    font-size: 1.1rem;
+    padding: 12px 20px;
+    font-weight: 600;
+  }
+
+     main h1 + p {
+        font-size: 1.6 rem !important;
+        letter-spacing: 1px;
+        max-width: 1100px;
+     }
+
+  /* Make hero section even bigger on desktop */
+  .home h1 {
+    font-size: 6.5rem; /* Huge on desktop */
+  }
+
+  .home p {
+    font-size: 2rem; /* Larger paragraph text on desktop */
+    max-width: 800px;
+  }
+
+  .projects {
+    gap: 30px;
+    padding: 30px 0;
+  }
+  
+  .card {
+    flex: 1 1 340px;
+    max-width: 420px;
+    min-height: 600px;
+    margin: 12px;
+  }
+  
+  .card > header {
+    padding: 20px 15px;
+    min-height: 60px;
+  }
+  
+  .card header h4 {
+    font-size: 1.1rem;
+  }
+  
+  .card img.mockup {
+    height: 200px;
+    margin: 15px 0;
+  }
+  
+  .card ul {
+    padding: 15px 25px;
+    font-size: 0.95rem;
+  }
+  
+  .card ul li {
+    margin-bottom: 12px;
+  }
+  
+  .card button {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    border-radius: 25px;
+    margin: 20px 20px 25px 20px;
+  }
+  
+  /* Timeline desktop styles */
+  .timeline {
+    padding: 0 60px;
+  }
+  
+  .timeline::before {
+    left: 50px;
+  }
+  
+  .timeline-marker {
+    left: -70px;
+    width: 18px;
+    height: 18px;
+  }
+  
+  .timeline-item {
+    padding-left: 120px;
+    margin-bottom: 3rem;
+  }
+  
+  .timeline-content {
+    padding: 2rem;
+  }
+  
+  .timeline-header h4 {
+    font-size: 1.35rem;
+  }
+  
+  .timeline-company {
+    font-size: 1.05rem;
+  }
+  
+  .timeline-duration {
+    font-size: 0.9rem;
+  }
+  
+  .timeline-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  
+  /* About section desktop styles */
+  .about {
+    padding: 40px 60px;
+  }
+  
+  .about-content {
+    flex-direction: row;
+    text-align: left;
+    gap: 40px;
+    margin-bottom: 50px;
+  }
+  
+  .profile-image {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .about-text p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
+  
+  .about h3 {
+    font-size: 2rem;
+  }
+  
+  .gallery {
+    gap: 20px;
+  }
+  
+  .gallery figure {
+    width: 320px;
+  }
+  
+  .gallery img {
+    height: auto;
+    min-height: 180px;
+    max-height: 280px;
+  }
+  
+  /* Hero section desktop styles */
+  .home {
+    min-height: 60vh; /* Even less height on desktop */
+    padding: 60px 0 80px 0; /* More control over top/bottom padding */
+    padding-top: 60px; /* Controlled top spacing */
+  }
+  
+  #projects {
+    margin-top: 60px; /* Moderate spacing on desktop */
+    padding-top: 30px;
+  }
+  
+  .scroll-text {
+    bottom: 100px;
+  }
+  
+  .scroll-arrow {
+    bottom: 60px;
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* Large desktop (min-width: 1200px) */
+@media screen and (min-width: 1200px) {
+  .card {
+    max-width: 380px;
+  }
+     main h1 + p {
+      font-size: 1.8 rem !important;
+      letter-spacing: 1.2px;
+      max-width: 1200px;
+    }
+  
+  .about {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .gallery figure {
+    width: 300px;
+  }
+  
+  .gallery img {
+    height: auto;
+    min-height: 200px;
+    max-height: 300px;
+  }
+}
