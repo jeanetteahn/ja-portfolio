@@ -138,7 +138,7 @@ nav {
   border-radius: 20px;
   flex: 1 1 280px; /* Mobile-first: smaller minimum width */
   max-width: 100%; /* Full width on mobile */
-  min-height: 520px; /* Mobile-first: smaller height */
+  min-height: 380px; /* Reduced from 420px */
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -157,9 +157,9 @@ nav {
 .card > header {
   background: #fff;
   border-bottom: 3px solid #34568B;
-  padding: 16px 12px; /* Mobile-first: smaller padding */
+  padding: 12px 10px; /* Further reduced padding */
   text-align: center;
-  min-height: 50px; /* Mobile-first: smaller header height */
+  min-height: 40px; /* Reduced from 45px */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -173,24 +173,26 @@ nav {
   font-size: 1rem; /* slightly smaller font */
 }
 
-/* Mockup image - Mobile first */
+/* Mockup image - Mobile first - FIXED TO SHOW FULL IMAGE */
 .card img.mockup {
   width: 100%;
-  height: 160px; /* Mobile-first: smaller height */
-  object-fit: cover;
-  margin: 12px 0; /* Mobile-first: smaller margins */
+  height: 120px; /* Keep the same heights as before */
+  object-fit: contain; /* Changed from 'cover' to 'contain' */
+  object-position: center; /* Center the image within the container */
+  margin: 8px 0; /* Reduced from 10px */
   border-radius: 8px; /* Mobile-first: smaller radius */
   padding: 0 12px; /* Mobile-first: smaller padding */
   box-sizing: border-box;
+  background-color: #f8f9fa; /* Add a subtle background color to fill empty space */
 }
 
 /* List inside card - Mobile first */
 .card ul {
-  padding: 12px 20px; /* Mobile-first: smaller padding */
+  padding: 8px 16px; /* Further reduced padding */
   margin: 0;
   color: #333;
-  line-height: 1.5;
-  font-size: 0.9rem; /* Mobile-first: smaller font */
+  line-height: 1.3; /* Tighter line height */
+  font-size: 0.8rem; /* Smaller font */
   list-style-type: disc;
   flex: 1;
   display: flex;
@@ -199,7 +201,7 @@ nav {
 }
 
 .card ul li {
-  margin-bottom: 8px;
+  margin-bottom: 6px; /* Reduced from 8px */
 }
 
 /* Button styling - Mobile first */
@@ -207,13 +209,13 @@ nav {
   background-color: #34568B;
   color: #fff;
   border: none;
-  border-radius: 22px; /* Mobile-first: smaller radius */
-  padding: 10px 20px; /* Mobile-first: smaller padding */
-  margin: 15px 15px 20px 15px; /* Mobile-first: smaller margins */
+  border-radius: 18px; /* Smaller radius */
+  padding: 8px 16px; /* Reduced padding */
+  margin: 10px 10px 15px 10px; /* Reduced margins */
   cursor: pointer;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: 0.9rem; /* Mobile-first: smaller font */
+  font-size: 0.8rem; /* Smaller font */
   transition: all 0.3s ease;
   margin-top: auto;
   align-self: stretch;
@@ -492,17 +494,32 @@ footer p {
   padding: 0;
 }
 
-/* HERO SECTION WHITE SPACE ENHANCEMENT */
-/* Reduced viewport hero section - less white space */
+/* HERO SECTION - UPDATED WITH PROPER SPACING */
 .home {
-  min-height: 70vh; /* Reduced from 100vh to 70vh */
+  min-height: 35vh; /* Reduced from 40vh */
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Changed from center to flex-start */
+  justify-content: center; /* Changed back to center for better distribution */
   align-items: center;
-  padding: 40px 0 60px 0; /* Less top padding, more bottom for arrow */
-  position: relative; /* CRITICAL: This makes the arrow position relative to this section */
-  padding-top: 40px; /* Specific top padding control */
+  padding: 10px 20px 25px 20px; /* Further reduced padding */
+  position: relative;
+  gap: 0.75rem; /* Reduced gap from 1rem */
+}
+
+/* Main heading spacing */
+.home h1 {
+  margin-bottom: 0.5rem; /* Reduced from 0.75rem */
+  text-align: center;
+}
+
+/* Main description paragraph - override the global h1 + p styling for hero */
+.home h1 + p {
+  font-size: 1.2rem !important; /* Reduced from 1.3rem */
+  font-weight: 400 !important; /* Lighter weight */
+  letter-spacing: 0.3px !important; /* Reduced letter spacing */
+  margin-bottom: 1rem !important; /* Reduced from 1.5rem */
+  max-width: 800px;
+  text-align: center;
 }
 
 /* Add more space before the Recent Projects section */
@@ -511,36 +528,30 @@ footer p {
   padding-top: 20px; /* Reduced padding */
 }
 
-/* Scroll text styling - positioned above arrow */
+/* Scroll section - container for text and arrow */
+.scroll-section {
+  display: flex;
+  flex-direction: column; /* Stack vertically */
+  align-items: center;
+  justify-content: center;
+  gap: 0; /* No spacing between text and arrow */
+}
+
+/* Scroll text styling - no animation */
 .scroll-text {
-  position: absolute;
-  bottom: 80px; /* Above the arrow */
-  left: 50%;
-  transform: translateX(-50%);
-  color: #34568B;
+  color: #34818B; /* Changed to match arrow color */
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 0.75rem; /* Reduced from 0.85rem */
   margin: 0;
   opacity: 0.8;
-  animation: fadeInOut 3s infinite;
   text-align: center;
 }
 
-/* Fade animation for scroll text */
-@keyframes fadeInOut {
-  0%, 100% { opacity: 0.6; }
-  50% { opacity: 1; }
-}
-
-/* Animated arrow using SVG - trying different path */
+/* Arrow - positioned below text */
 .scroll-arrow {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 32px; /* Made bigger */
-  height: 32px; /* Made bigger */
+  width: 36px; /* Increased from 28px */
+  height: 36px; /* Increased from 28px */
   background-image: url('../images/arrow.svg');
   background-size: contain;
   background-repeat: no-repeat;
@@ -551,23 +562,24 @@ footer p {
   opacity: 0.8;
   display: inline-block;
   text-decoration: none;
+  flex-shrink: 0; /* Prevent arrow from shrinking */
 }
 
 .scroll-arrow:hover {
   opacity: 1;
-  transform: translateX(-50%) translateY(-3px);
+  transform: translateY(-3px);
 }
 
-/* Bouncing animation for the arrow */
+/* Bouncing animation for the arrow - updated for relative positioning */
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
-    transform: translateX(-50%) translateY(0);
+    transform: translateY(0);
   }
   40% {
-    transform: translateX(-50%) translateY(-6px);
+    transform: translateY(-6px);
   }
   60% {
-    transform: translateX(-50%) translateY(-3px);
+    transform: translateY(-3px);
   }
 }
 
@@ -582,14 +594,15 @@ footer p {
   
   .card {
     flex: 1 1 300px;
-    min-height: 550px;
+    min-height: 410px; /* Reduced from 450px */
     margin: 8px;
   }
   
   .card img.mockup {
-    height: 180px;
-    margin: 14px 0;
+    height: 140px; /* Keep existing height */
+    margin: 10px 0;
     padding: 0 14px;
+    object-fit: contain; /* Ensure full image is visible */
   }
   
   .gallery figure {
@@ -633,40 +646,41 @@ footer p {
   .card {
     flex: 1 1 320px;
     max-width: 400px;
-    min-height: 580px;
+    min-height: 430px; /* Reduced from 480px */
     margin: 10px;
   }
   
   .card > header {
-    padding: 18px 15px;
-    min-height: 55px;
+    padding: 14px 15px; /* Reduced */
+    min-height: 45px;
   }
   
   .card header h4 {
-    font-size: 1.05rem;
+    font-size: 1rem; /* Slightly reduced */
   }
   
   .card img.mockup {
-    height: 190px;
-    margin: 15px 0;
+    height: 150px; /* Keep existing height */
+    margin: 12px 0;
     border-radius: 10px;
     padding: 0 15px;
+    object-fit: contain; /* Ensure full image is visible */
   }
   
   .card ul {
-    padding: 14px 22px;
-    font-size: 0.92rem;
+    padding: 10px 18px; /* Reduced */
+    font-size: 0.85rem; /* Smaller */
   }
   
   .card ul li {
-    margin-bottom: 11px;
+    margin-bottom: 8px; /* Reduced */
   }
   
   .card button {
-    padding: 11px 22px;
-    font-size: 0.92rem;
-    border-radius: 24px;
-    margin: 18px 18px 22px 18px;
+    padding: 9px 18px; /* Reduced */
+    font-size: 0.85rem; /* Smaller */
+    border-radius: 20px;
+    margin: 14px 14px 18px 14px; /* Reduced margins */
   }
   
   /* Experience section tablet styles */
@@ -692,25 +706,31 @@ footer p {
     gap: 25px;
   }
   
-  /* Hero section tablet styles */
+  /* Hero section tablet styles - UPDATED */
   .home {
-    padding: 100px 0;
+    gap: 1rem; /* Reduced from 1.5rem */
+    min-height: 38vh; /* Further reduced height */
+    padding: 15px 20px 30px 20px; /* Reduced padding */
+  }
+  
+  .home h1 + p {
+    font-size: 1.4rem !important; /* Slightly larger on tablets */
+    letter-spacing: 0.4px !important;
+    margin-bottom: 1.5rem !important; /* Reduced from 2rem */
+  }
+  
+  .scroll-text {
+    font-size: 0.8rem; /* Slightly larger on tablets */
+  }
+  
+  .scroll-arrow {
+    width: 40px; /* Increased from 32px */
+    height: 40px; /* Increased from 32px */
   }
   
   #projects {
     margin-top: 140px;
     padding-top: 80px;
-  }
-  
-  .scroll-text {
-    bottom: 120px;
-    font-size: 1rem;
-  }
-  
-  .scroll-arrow {
-    bottom: 80px;
-    width: 40px; /* Even bigger on desktop */
-    height: 40px; /* Even bigger on desktop */
   }
 }
 
@@ -758,38 +778,39 @@ footer p {
   .card {
     flex: 1 1 340px;
     max-width: 420px;
-    min-height: 600px;
+    min-height: 460px; /* Reduced from 520px */
     margin: 12px;
   }
   
   .card > header {
-    padding: 20px 15px;
-    min-height: 60px;
+    padding: 16px 15px; /* Reduced */
+    min-height: 50px;
   }
   
   .card header h4 {
-    font-size: 1.1rem;
+    font-size: 1.05rem; /* Slightly reduced */
   }
   
   .card img.mockup {
-    height: 200px;
-    margin: 15px 0;
+    height: 160px; /* Keep existing height */
+    margin: 12px 0;
+    object-fit: contain; /* Ensure full image is visible */
   }
   
   .card ul {
-    padding: 15px 25px;
-    font-size: 0.95rem;
+    padding: 12px 22px; /* Reduced */
+    font-size: 0.9rem; /* Smaller */
   }
   
   .card ul li {
-    margin-bottom: 12px;
+    margin-bottom: 10px; /* Reduced */
   }
   
   .card button {
-    padding: 12px 24px;
-    font-size: 0.95rem;
-    border-radius: 25px;
-    margin: 20px 20px 25px 20px;
+    padding: 10px 20px; /* Reduced */
+    font-size: 0.9rem; /* Smaller */
+    border-radius: 22px;
+    margin: 16px 16px 20px 16px; /* Reduced margins */
   }
   
   /* Timeline desktop styles */
@@ -873,26 +894,32 @@ footer p {
     max-height: 280px;
   }
   
-  /* Hero section desktop styles */
+  /* Hero section desktop styles - UPDATED */
   .home {
-    min-height: 60vh; /* Even less height on desktop */
-    padding: 60px 0 80px 0; /* More control over top/bottom padding */
-    padding-top: 60px; /* Controlled top spacing */
+    gap: 1.5rem; /* Reduced from 2rem */
+    min-height: 42vh; /* Reduced from 50vh */
+    padding: 20px 20px 35px 20px; /* Reduced padding */
+  }
+  
+  .home h1 + p {
+    font-size: 1.5rem !important; /* Balanced size for desktop */
+    letter-spacing: 0.5px !important;
+    margin-bottom: 2rem !important; /* Reduced from 2.5rem */
+    max-width: 900px;
+  }
+  
+  .scroll-text {
+    font-size: 0.85rem; /* Balanced size on desktop */
+  }
+  
+  .scroll-arrow {
+    width: 44px; /* Increased from 32px */
+    height: 44px; /* Increased from 32px */
   }
   
   #projects {
     margin-top: 60px; /* Moderate spacing on desktop */
     padding-top: 30px;
-  }
-  
-  .scroll-text {
-    bottom: 100px;
-  }
-  
-  .scroll-arrow {
-    bottom: 60px;
-    width: 32px;
-    height: 32px;
   }
 }
 
@@ -919,6 +946,13 @@ footer p {
   .gallery img {
     height: auto;
     min-height: 200px;
-    max-height: 300px;
+    max-width: 300px;
+  }
+  
+  /* Hero section large desktop styles - UPDATED */
+  .home h1 + p {
+    font-size: 1.6rem !important; /* Maximum size for large screens */
+    letter-spacing: 0.6px !important;
+    max-width: 1000px;
   }
 }
