@@ -88,7 +88,7 @@ nav {
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 15px; /* Mobile-first: smaller gap between links */
+    gap: 8px; /* Further reduced gap between links */
     color: #34568B;
 }
 
@@ -113,15 +113,19 @@ nav {
 
 /* Navigation hover effects */
 .nav_links li a:hover {
-    background-color:  #34818B;
-    color: #fff;
+    background-color: transparent;
+    color: #34818B;
+    text-decoration: underline;
+    text-decoration-color: #34818B;
     transform: translateY(-2px);
 }
 
 /* Active/Current page styling (optional) */
 .nav_links li a.active {
-    background-color: #34818B;
-    color: #fff;
+    background-color: transparent;
+    color: #34818B;
+    text-decoration: underline;
+    text-decoration-color: #34818B;
 }
 
 /* Container for cards */
@@ -378,9 +382,9 @@ nav {
   text-align: center;
 }
 
-/* Center the paragraphs in the "Through My Lens" section */
+/* Left-align the paragraphs in the "Through My Lens" section */
 .about > p {
-  text-align: center;
+  text-align: left; /* Changed from center to left */
   font-size: 1.1rem !important; /* Larger, more readable size to match h2 paragraphs */
   line-height: 1.6;
   color: #333;
@@ -583,6 +587,17 @@ footer p {
   }
 }
 
+/* Reduced motion accessibility - disable animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-arrow {
+    animation: none;
+  }
+  
+  .scroll-arrow:hover {
+    transform: none;
+  }
+}
+
 /* RESPONSIVE STYLES */
 
 /* Small tablets and larger phones (min-width: 480px) */
@@ -623,7 +638,7 @@ footer p {
   }
   
   .nav_links {
-    gap: 25px;
+    gap: 12px; /* Further reduced gap for tablets */
   }
   
   .nav_links li a {
@@ -745,7 +760,7 @@ footer p {
   }
   
   .nav_links {
-    gap: 35px;
+    gap: 16px; /* Further reduced gap for desktop */
   }
   
   .nav_links li a {
