@@ -1,11 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/png" href="images/logo_icon.png">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/starter.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/case-study.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <title>Lines of Thought - Case Study | Jeanette Ahn</title>
+  </head>
+  <body class="case-study-page">
+   
+    <header>
+       <a class="skip" href="#skip">Skip to Main Content</a>
+        <a href="index.html" class="logo-link" aria-label="Go to home">
+        <img src="images/JAlogo.png" alt="Jeanette Ahn Logo" id="logo">
+      </a>
+      <nav>
+        <ul class="nav_links">
+          <li class="nav_item"><a href="index.html#projects">Recent Projects</a></li>
+          <li class="nav_item"><a href="index.html#about">About</a></li>
+          <li class="nav_item"><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+  </header>
+  
+  <main id="skip">
+    <!-- Sticky Side Navigation (Desktop) -->
+    <nav class="case-study-nav" aria-label="Case study navigation">
+      <ul class="case-nav-links">
+        <li><a href="#brief" class="nav-link active">Project Brief</a></li>
+        <li><a href="#process" class="nav-link">Process</a></li>
+        <li><a href="#outcome" class="nav-link">Outcome</a></li>
+        <li><a href="#learned" class="nav-link">What I Learned</a></li>
+        <li><a href="#impact" class="nav-link">Impact & Tools</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Navigation (Optional - shows on tablets/mobile) -->
+    <nav class="case-study-nav-mobile" aria-label="Case study navigation mobile">
+      <ul class="case-nav-links-mobile">
+        <li><a href="#brief" class="nav-link active">Brief</a></li>
+        <li><a href="#process" class="nav-link">Process</a></li>
+        <li><a href="#outcome" class="nav-link">Outcome</a></li>
+        <li><a href="#learned" class="nav-link">Learned</a></li>
+        <li><a href="#impact" class="nav-link">Impact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="case-study-hero" id="hero">
+      <div class="hero-content">
+        <h1>Lines of Thought</h1>
+        <p class="hero-subtitle">A digital gallery bridging art history and web design through curated storytelling and interactive experiences.</p>
+        
+        <div class="project-meta">
+          <div class="meta-item">
+            <span class="meta-label">Role</span>
+            <span class="meta-value"> Web Designer & Developer</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Project Type</span>
+            <span class="meta-value">Personal/Academic</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Timeline</span>
+            <span class="meta-value">March to April 2025</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Tools</span>
+            <span class="meta-value">HTML, CSS, JavaScript</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-image">
+        <img src="images/LinesofThought.png" alt="Lines of Thought gallery interface mockup">
+      </div>
+    </section>
+
+    <!-- Project Brief -->
+    <section class="content-section" id="brief">
+      <h2>Project Brief</h2>
+      <div class="brief-content">
+        <p><strong>Lines of Thought</strong> is a digital gallery created as a personal project for my web design class. It curates artworks, sculptures, and architectural pieces in a virtual walkthrough experience, with each work paired with a museum-style label combining context and personal reflection.</p>
+        
+        <p>As an homage to my Art History undergraduate background, the project explores how digital design can translate the contemplative atmosphere of a museum into an accessible online format—bridging my past academic training with my current focus in UX design.</p>
+        
+        <div class="project-link-section">
+          <a href="https://jeanetteahn.github.io/linesofthought/home.html" target="_blank" class="live-site-button">🔗 Visit the Live Site →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="content-section" id="process">
+      <h2>Process</h2>
+      <div class="process-phases">
+        
+        <!-- Research & Curation Phase -->
+        <div class="process-phase">
+          <div class="phase-header">
+            <h3>Research & Curation</h3>
+          </div>
+          <div class="phase-content">
+            <ul class="process-list">
+              <li>Outlined the collection, selected works, and wrote interpretive labels.</li>
+              <li>Researched historical/artistic context to ground each piece in storytelling.</li>
+              <li>Prepped and optimized images for web display.</li>
+            </ul>
+            <div class="phase-visual">
+              <img src="images/curation-process.png" alt="Collection curation and research process">
+              <p class="image-caption">Curatorial research and artwork selection process</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Design & Development Phase -->
+        <div class="process-phase">
+          <div class="phase-header">
+            <h3>Design & Development</h3>
+          </div>
+          <div class="phase-content">
+            <ul class="process-list">
+              <li>Built the gallery using HTML/CSS after finding React unnecessarily complex for the scope.</li>
+              <li>Created a clean site structure to support JavaScript lightbox functionality.</li>
+              <li>Iterated on responsive layouts using flexbox and media queries for consistency across devices.</li>
+            </ul>
+            <div class="phase-visual">
+              <img src="images/development-wireframes.png" alt="Development wireframes and code structure">
+              <p class="image-caption">Site structure and responsive layout development</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Refinement & Accessibility Phase -->
+        <div class="process-phase">
+          <div class="phase-header">
+            <h3>Refinement & Accessibility</h3>
+          </div>
+          <div class="phase-content">
+            <ul class="process-list">
+              <li>Debugged lightbox duplication caused by unwrapped HTML elements.</li>
+              <li>Resized logo and navigation for improved hierarchy and readability.</li>
+              <li>Passed accessibility validations and standardized formatting across pages.</li>
+              <li>Added a typewriting animation on the homepage to reinforce the theme of "lines of thought," refining cursor blinking to avoid distraction.</li>
+            </ul>
+            <div class="phase-visual">
+              <img src="images/accessibility-testing.png" alt="Accessibility testing and refinements">
+              <p class="image-caption">Accessibility testing and final refinements</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Outcome Section -->
+    <section class="content-section outcome-section" id="outcome">
+      <h2>Outcome</h2>
+      <div class="outcome-content">
+        
+        <div class="outcome-features">
+          <div class="feature-highlight">
+            <div class="feature-icon">🔍</div>
+            <h3>Interactive Lightbox</h3>
+            <p>Immersive artwork viewing experience</p>
+          </div>
+          <div class="feature-highlight">
+            <div class="feature-icon">📱</div>
+            <h3>Responsive Design</h3>
+            <p>Optimized for desktop and mobile</p>
+          </div>
+          <div class="feature-highlight">
+            <div class="feature-icon">✨</div>
+            <h3>Typewriting Animation</h3>
+            <p>Subtle homepage effect reinforcing the theme</p>
+          </div>
+          <div class="feature-highlight">
+            <div class="feature-icon">🎨</div>
+            <h3>Museum-Inspired Layout</h3>
+            <p>Minimalist design focused on the works</p>
+          </div>
+        </div>
+
+        <div class="outcome-visuals">
+          <div class="visual-demo">
+            <img src="images/homepage-typewriter.gif" alt="Homepage typewriting animation demonstration">
+            <p class="image-caption">Homepage scroll and typewriting animation</p>
+          </div>
+          <div class="visual-demo">
+            <img src="images/lightbox-demo.gif" alt="Interactive lightbox functionality">
+            <p class="image-caption">Interactive lightbox for artwork viewing</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What I Learned -->
+    <section class="content-section learning-section" id="learned">
+      <h2>What I Learned</h2>
+      <div class="learning-content">
+        <div class="learning-intro">
+          <p>This project challenged me to integrate my <strong>art history perspective</strong> with <strong>new technical and design skills.</strong> Writing labels drew on curatorial storytelling, while building the gallery required clean HTML structure, responsive layouts, and thoughtful animation choices.</p>
+        </div>
+
+        <div class="key-takeaways">
+          <h3>Key Takeaways:</h3>
+          
+          <div class="takeaway-item">
+            <div class="takeaway-icon">🏗️</div>
+            <div class="takeaway-content">
+              <h4>Structure supports experience</h4>
+              <p>A small HTML oversight created major lightbox issues—reinforcing the importance of clean markup in scalable design.</p>
+            </div>
+          </div>
+
+          <div class="takeaway-item">
+            <div class="takeaway-icon">⚖️</div>
+            <div class="takeaway-content">
+              <h4>Design is about balance</h4>
+              <p>Animations can add meaning (e.g., the typewriter effect echoing "lines of thought"), but must be refined to avoid distraction.</p>
+            </div>
+          </div>
+
+          <div class="takeaway-item">
+            <div class="takeaway-icon">♿</div>
+            <div class="takeaway-content">
+              <h4>Accessibility shapes usability</h4>
+              <p>Iterating on responsive layouts emphasized how small adjustments ensure inclusivity across devices.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact Statement -->
+    <section class="content-section impact-section" id="impact">
+      <h2>Impact</h2>
+      <div class="impact-statement">
+        <blockquote>
+          <p><strong>Lines of Thought</strong> demonstrates how I draw on my art history background to inform digital design, creating experiences that are both contextually rich and user-centered.</p>
+        </blockquote>
+      </div>
+      
+      <div class="tools-section">
+        <h3>Tools Used</h3>
+        <div class="tools-list">
+          <span class="tool-tag">HTML</span>
+          <span class="tool-tag">CSS</span>
+          <span class="tool-tag">JavaScript (Lightbox)</span>
+          <span class="tool-tag">Flexbox</span>
+          <span class="tool-tag">CSS Keyframes</span>
+          <span class="tool-tag">GitHub Pages</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation to other projects -->
+    <section class="project-navigation">
+      <h2>More Projects</h2>
+      <div class="nav-projects">
+        <a href="connectability.html" class="nav-project-card">
+          <img src="images/Connectability.png" alt="Connectability project">
+          <h3>Connectability</h3>
+          <p>UX Design for disability community platform</p>
+        </a>
+        <a href="heroes.html" class="nav-project-card">
+          <img src="images/Heroes.png" alt="Heroes project">
+          <h3>Heroes</h3>
+          <p>Healthcare monitoring system design</p>
+        </a>
+      </div>
+      
+      <div class="back-to-portfolio">
+        <a href="index.html" class="back-button">← Back to Portfolio</a>
+      </div>
+    </section>
+  </main>
+
+    <footer>
+       <p>&copy; 2025 Jeanette Ahn Design</p>
+    </footer>
+
+    <script>
+        // Sticky navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.case-nav-links .nav-link, .case-nav-links-mobile .nav-link');
+            const sections = document.querySelectorAll('section[id]');
+            
+            // Function to update active nav link based on scroll position
+            function updateActiveLink() {
+                let current = '';
+                const scrollPosition = window.scrollY + 150; // Offset for header
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                // Update active states for both desktop and mobile navs
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+            
+            // Smooth scroll for navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    
+                    if (targetSection) {
+                        const headerHeight = document.querySelector('header').offsetHeight;
+                        const mobileNavHeight = document.querySelector('.case-study-nav-mobile') ? 
+                            document.querySelector('.case-study-nav-mobile').offsetHeight : 0;
+                        const targetPosition = targetSection.offsetTop - headerHeight - mobileNavHeight - 20;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Update active link on scroll
+            window.addEventListener('scroll', updateActiveLink);
+            
+            // Initial call to set active link
+            updateActiveLink();
+        });
+    </script>
+
+  </body>
 </html>
