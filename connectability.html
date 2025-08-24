@@ -1,11 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/png" href="images/logo_icon.png">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/starter.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/case-study.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <title>ConnectAbility - Case Study | Jeanette Ahn</title>
+  </head>
+  <body class="case-study-page">
+   
+    <header>
+       <a class="skip" href="#skip">Skip to Main Content</a>
+        <a href="index.html" class="logo-link" aria-label="Go to home">
+        <img src="images/JAlogo.png" alt="Jeanette Ahn Logo" id="logo">
+      </a>
+      <nav>
+        <ul class="nav_links">
+          <li class="nav_item"><a href="index.html#projects">Recent Projects</a></li>
+          <li class="nav_item"><a href="index.html#about">About</a></li>
+          <li class="nav_item"><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+  </header>
+  
+  <main id="skip">
+    <!-- Sticky Side Navigation (Desktop) -->
+    <nav class="case-study-nav" aria-label="Case study navigation">
+      <ul class="case-nav-links">
+        <li><a href="#brief" class="nav-link active">Project Brief</a></li>
+        <li><a href="#research" class="nav-link">Research & Problem</a></li>
+        <li><a href="#process" class="nav-link">Design Process</a></li>
+        <li><a href="#outcome" class="nav-link">Final Prototype</a></li>
+        <li><a href="#learned" class="nav-link">Key Takeaways</a></li>
+        <li><a href="#impact" class="nav-link">Impact & Next Steps</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Navigation (Optional - shows on tablets/mobile) -->
+    <nav class="case-study-nav-mobile" aria-label="Case study navigation mobile">
+      <ul class="case-nav-links-mobile">
+        <li><a href="#brief" class="nav-link active">Brief</a></li>
+        <li><a href="#research" class="nav-link">Research</a></li>
+        <li><a href="#process" class="nav-link">Process</a></li>
+        <li><a href="#outcome" class="nav-link">Prototype</a></li>
+        <li><a href="#learned" class="nav-link">Takeaways</a></li>
+        <li><a href="#impact" class="nav-link">Impact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="case-study-hero" id="hero">
+      <div class="hero-content">
+        <h1>ConnectAbility</h1>
+        <p class="hero-subtitle">Bridging communities through accessible events—a centralized platform to help individuals with disabilities, caregivers, and families find inclusive community resources in Washtenaw County.</p>
+        
+        <div class="project-meta">
+          <div class="meta-item">
+            <span class="meta-label">Role</span>
+            <span class="meta-value">UX Designer & Researcher</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Project Type</span>
+            <span class="meta-value">Academic/UX Course Project</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Timeline</span>
+            <span class="meta-value">August - December 2024</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Tools</span>
+            <span class="meta-value">Figma, Miro, User Testing, Storyboarding</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-image">
+        <img src="images/Connectability.png" alt="ConnectAbility platform interface mockup">
+      </div>
+    </section>
+
+    <!-- Project Brief -->
+    <section class="content-section" id="brief">
+      <h2>Project Brief</h2>
+      <div class="brief-content">
+        <p><strong>ConnectAbility</strong> is a UX design course project inspired by my personal experiences growing up in Washtenaw County, Michigan. The platform addresses a critical gap in how individuals with disabilities, caregivers, and families discover inclusive community events and resources.</p>
+        
+        <p>The idea emerged from a personal memory of watching a family member struggle to organize resources for a loved one with a disability. That experience shaped both the problem I pursued and the solution I created, allowing me to connect real-world empathy with formal UX methods.</p>
+        
+        <div class="personal-connection">
+          <h3>Personal Motivation</h3>
+          <p>Growing up in Washtenaw County, I witnessed firsthand how fragmented community resources can create barriers for families seeking inclusive activities. This project represents my commitment to using design as a tool for meaningful social impact.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research & Problem Section -->
+    <section class="content-section" id="research">
+      <h2>Research & Problem Definition</h2>
+      <div class="research-content">
+        
+        <div class="problem-statement">
+          <h3>Problem Statement</h3>
+          <blockquote>
+            <p>How might we create a <strong>centralized, accessible platform</strong> in Washtenaw County to streamline event discovery for people with disabilities, caregivers, and their families?</p>
+          </blockquote>
+        </div>
+
+        <div class="research-findings">
+          <h3>Research Insights</h3>
+          <div class="insights-grid">
+            <div class="insight-card">
+              <div class="insight-stat">~20%</div>
+              <p>Only about 20% of individuals with disabilities in Washtenaw County report receiving adequate care</p>
+            </div>
+            <div class="insight-card">
+              <div class="insight-icon">📄</div>
+              <p><strong>Fragmented Resources:</strong> Community resources are scattered across flyers, websites, and word-of-mouth communication</p>
+            </div>
+            <div class="insight-card">
+              <div class="insight-icon">⚡</div>
+              <p><strong>Increased Workload:</strong> This fragmentation creates additional barriers to participation and increases cognitive load</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="research-context">
+          <h3>Understanding the Landscape</h3>
+          <p>Through initial research, I discovered that families and caregivers often spend significant time piecing together information from multiple sources. This not only creates frustration but also means many miss out on valuable community connections and resources.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="content-section" id="process">
+      <h2>Design Process</h2>
+      <div class="process-phases">
+        
+        <!-- Storyboarding & Ideation Phase -->
+        <div class="process-phase">
+          <div class="phase-header">
+            <h3>Storyboarding & Ideation</h3>
+          </div>
+          <div class="phase-content">
+            <p>I explored multiple formats (website vs. mobile app) and visualized user scenarios through storyboards. This process clarified how different touchpoints could address accessibility needs and user priorities.</p>
+            <div class="phase-visual">
+              <img src="images/storyboards.png" alt="ConnectAbility user storyboards and initial ideation sketches">
+              <p class="image-caption">User storyboards exploring different scenarios and platform formats</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Personas & Journey Mapping Phase -->
+        <div class="process-phase">
+          <div class="phase-header">
+            <h3>Personas & Journey Mapping</h3>
+          </div>
+          <div class="phase-content">
+            <p>Developed three key personas capturing different user perspectives:</p>
+            <ul class="persona-list">
+              <li><strong>Person with a disability</strong> - Direct user seeking accessible events</li>
+              <li><strong>Caregiver</strong> - Professional seeking resources for clients</li>
+              <li><strong>Family member</strong> - Parent or relative coordinating activities</li>
+            </ul>
+            <p>Used Miro to map user journeys with color-coded Post-its, synthesizing common needs such as simplified search, trustworthy content, and reduced cognitive load.</p>
+            <div class="phase-visual">
+              <img src="images/userjourney.png" alt="Three user personas and journey mapping visualization">
+              <p class="image-caption">User personas and journey mapping process using Miro with color-coded insights</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Prototyping & Testing Phase -->
+        <div class="process-phase">
+          <div class="phase-header">
+            <h3>Prototyping & Testing</h3>
+          </div>
+          <div class="phase-content">
+            <div class="testing-approach">
+              <p>My iterative approach included:</p>
+              <ul>
+                <li>Started with paper sketches to explore layout concepts</li>
+                <li>Moved to low-fidelity digital wireframes in Figma</li>
+                <li>Conducted usability testing with family members of individuals with disabilities</li>
+              </ul>
+            </div>
+            <div class="key-finding">
+              <h4>🔍 Key Testing Insight</h4>
+              <p>Users wanted reassurance about credibility and trustworthiness. This feedback directly led to adding an <strong>About page</strong> to communicate the platform's mission and build user confidence.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Outcome Section -->
+    <section class="content-section outcome-section" id="outcome">
+      <h2>Final Prototype Features</h2>
+      <div class="outcome-content">
+        
+        <div class="prototype-overview">
+          <p>The final ConnectAbility prototype focuses on simplicity, accessibility, and trust-building to create an inclusive experience for all users.</p>
+        </div>
+
+        <div class="outcome-features">
+          <div class="feature-highlight">
+            <div class="feature-icon">🔍</div>
+            <h3>Smart Search & Filtering</h3>
+            <p>Search and filter events by category and specific accessibility needs</p>
+          </div>
+          <div class="feature-highlight">
+            <div class="feature-icon">📅</div>
+            <h3>Multiple View Options</h3>
+            <p>Calendar and map views support different cognitive styles and preferences</p>
+          </div>
+          <div class="feature-highlight">
+            <div class="feature-icon">🔐</div>
+            <h3>Simple Authentication</h3>
+            <p>Streamlined login flow (name + password) reduces barriers for less tech-comfortable users</p>
+          </div>
+          <div class="feature-highlight">
+            <div class="feature-icon">🧭</div>
+            <h3>Consistent Navigation</h3>
+            <p>Clear navigation with Home, About, Calendar, and Map sections</p>
+          </div>
+          <div class="feature-highlight">
+            <div class="feature-icon">♿</div>
+            <h3>WCAG-Informed Design</h3>
+            <p>Inclusive layout, color contrast, and interactions following accessibility standards</p>
+          </div>
+          <div class="feature-highlight">
+            <div class="feature-icon">🤝</div>
+            <h3>Trust-Building Elements</h3>
+            <p>Dedicated About page communicates mission and builds user confidence</p>
+          </div>
+        </div>
+
+        <div class="prototype-visuals">
+          <div class="visual-demo">
+            <img src="images/Annotatedwireframes.png" alt="Annotated wireframes showing key features and accessibility considerations">
+            <p class="image-caption">Key screens highlighting search functionality, calendar view, and accessibility features</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What I Learned -->
+    <section class="content-section learning-section" id="learned">
+      <h2>Key Takeaways</h2>
+      <div class="learning-content">
+        <div class="learning-intro">
+          <p>This project taught me how to balance <strong>rapid ideation with strategic prioritization</strong> while keeping accessibility and user empathy at the center of every design decision.</p>
+        </div>
+
+        <div class="key-takeaways">
+          
+          <div class="takeaway-item">
+            <div class="takeaway-icon">🎯</div>
+            <div class="takeaway-content">
+              <h4>Scoping & Prioritization</h4>
+              <p>Learned how to balance rapid ideation with selecting core features when working independently. Understanding what to build first vs. what to save for future iterations.</p>
+            </div>
+          </div>
+
+          <div class="takeaway-item">
+            <div class="takeaway-icon">♿</div>
+            <div class="takeaway-content">
+              <h4>Accessibility in Practice</h4>
+              <p>Applying WCAG standards showed how small design details—like color contrast or navigation consistency—directly shape inclusivity and user experience.</p>
+            </div>
+          </div>
+
+          <div class="takeaway-item">
+            <div class="takeaway-icon">🔄</div>
+            <div class="takeaway-content">
+              <h4>Iterative Design Value</h4>
+              <p>Continuous feedback shaped meaningful features such as the About page, reinforcing the importance of testing with real users throughout the design process.</p>
+            </div>
+          </div>
+
+          <div class="takeaway-item">
+            <div class="takeaway-icon">❤️</div>
+            <div class="takeaway-content">
+              <h4>Empathy-Driven Design</h4>
+              <p>Personal experience informed the project direction, but formal UX methods validated and refined the solution to serve broader user needs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact Statement -->
+    <section class="content-section impact-section" id="impact">
+      <h2>Impact & Future Vision</h2>
+      <div class="impact-statement">
+        <blockquote>
+          <p>Although created as a <strong>class project</strong>, ConnectAbility demonstrates how I applied <strong>end-to-end UX methods—from research and personas to prototyping and testing—to design an inclusive solution grounded in empathy.</strong></p>
+        </blockquote>
+        <p>By centralizing resources into one platform, the concept reduces the stress of searching for events and helps families spend more time participating in their communities.</p>
+      </div>
+
+      <div class="next-steps-section">
+        <h3>Next Steps</h3>
+        <p>If further developed, ConnectAbility would expand to include:</p>
+        <div class="future-features">
+          <div class="future-feature">
+            <h4>📚 Event History & Reminders</h4>
+            <p>Booked event history and personalized reminder system</p>
+          </div>
+          <div class="future-feature">
+            <h4>💬 Community Forums</h4>
+            <p>Discussion spaces for user interaction and community building</p>
+          </div>
+          <div class="future-feature">
+            <h4>👤 Enhanced Profiles</h4>
+            <p>Profile customization and Google sign-in integration</p>
+          </div>
+          <div class="future-feature">
+            <h4>🔗 Comprehensive Support</h4>
+            <p>Footer with FAQs, Help, Terms of Service, and social links</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="tools-section">
+        <h3>Tools Used</h3>
+        <div class="tools-list">
+          <span class="tool-tag">Figma</span>
+          <span class="tool-tag">Miro</span>
+          <span class="tool-tag">Storyboarding</span>
+          <span class="tool-tag">User Testing</span>
+          <span class="tool-tag">Persona Development</span>
+          <span class="tool-tag">Journey Mapping</span>
+          <span class="tool-tag">WCAG Guidelines</span>
+          <span class="tool-tag">Paper Prototyping</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation to other projects -->
+    <section class="project-navigation">
+      <h2>More Projects</h2>
+      <div class="nav-projects">
+        <a href="linesofthought.html" class="nav-project-card">
+          <img src="images/LinesofThought.png" alt="Lines of Thought project">
+          <h3>Lines of Thought</h3>
+          <p>Digital gallery bridging art history and web design</p>
+        </a>
+        <a href="heroes.html" class="nav-project-card">
+          <img src="images/Heroes.png" alt="Heroes project">
+          <h3>Heroes</h3>
+          <p>Healthcare monitoring system design</p>
+        </a>
+      </div>
+      
+      <div class="back-to-portfolio">
+        <a href="index.html" class="back-button">← Back to Portfolio</a>
+      </div>
+    </section>
+  </main>
+
+    <footer>
+       <p>&copy; 2025 Jeanette Ahn Design</p>
+    </footer>
+
+    <script>
+        // Sticky navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.case-nav-links .nav-link, .case-nav-links-mobile .nav-link');
+            const sections = document.querySelectorAll('section[id]');
+            
+            // Function to update active nav link based on scroll position
+            function updateActiveLink() {
+                let current = '';
+                const scrollPosition = window.scrollY + 150; // Offset for header
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                // Update active states for both desktop and mobile navs
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+            
+            // Smooth scroll for navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    
+                    if (targetSection) {
+                        const headerHeight = document.querySelector('header').offsetHeight;
+                        const mobileNavHeight = document.querySelector('.case-study-nav-mobile') ? 
+                            document.querySelector('.case-study-nav-mobile').offsetHeight : 0;
+                        const targetPosition = targetSection.offsetTop - headerHeight - mobileNavHeight - 20;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Update active link on scroll
+            window.addEventListener('scroll', updateActiveLink);
+            
+            // Initial call to set active link
+            updateActiveLink();
+        });
+    </script>
+
+  </body>
 </html>
