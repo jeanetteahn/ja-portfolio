@@ -9,17 +9,29 @@
     <link rel="stylesheet" type="text/css" href="css/case-study.css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+    <!-- ADD THIS LINE - Font Awesome for hamburger icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heroes - Case Study | Jeanette Ahn</title>
   </head>
   <body class="case-study-page">
    
+    <!-- UPDATED HEADER with hamburger menu structure -->
     <header>
        <a class="skip" href="#skip">Skip to Main Content</a>
         <a href="index.html" class="logo-link" aria-label="Go to home">
         <img src="images/JAlogo.png" alt="Jeanette Ahn Logo" id="logo">
       </a>
+      
+      <!-- ADD hamburger button -->
+      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <i class="fa fa-bars"></i>
+      </button>
+      
+      <!-- ADD mobile menu overlay -->
+      <div class="mobile-menu-overlay"></div>
+      
       <nav>
         <ul class="nav_links">
           <li class="nav_item"><a href="index.html#projects">Recent Projects</a></li>
@@ -148,68 +160,60 @@
       <div class="process-phases">
         
         <div class="process-phase">
-          <div class="phase-content-wrapper">
+          <div class="phase-header">
+            <h3>Rapid Ideation & Validation</h3>
+          </div>
+          <div class="phase-content">
             <div class="phase-text">
-              <div class="phase-header">
-                <h3>Rapid Ideation & Validation</h3>
-              </div>
-              <div class="phase-content">
-                <p>Over the first phase of the project (September-October), we conducted thorough validation of our core hypothesis through interviews with healthcare workers and family caregivers. This extended timeline allowed us to identify the most critical pain points and iterate on our solution approach.</p>
-              </div>
+              <p>Over the first phase of the project (September-October), we conducted thorough validation of our core hypothesis through interviews with healthcare workers and family caregivers. This extended timeline allowed us to identify the most critical pain points and iterate on our solution approach.</p>
             </div>
-            <div class="phase-image">
-              <img src="images/ideation.png" alt="Ideation and validation process showing user interviews and hypothesis testing" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+            <div class="phase-visual">
+              <img src="images/ideation.png" alt="Ideation and validation process showing user interviews and hypothesis testing">
               <p class="image-caption">Validation process and key insights from caregiver interviews</p>
             </div>
           </div>
         </div>
 
         <div class="process-phase">
-          <div class="phase-content-wrapper">
+          <div class="phase-header">
+            <h3>Privacy-First Architecture Design</h3>
+          </div>
+          <div class="phase-content">
             <div class="phase-text">
-              <div class="phase-header">
-                <h3>Privacy-First Architecture Design</h3>
-              </div>
-              <div class="phase-content">
-                <p>We developed a system architecture that processes health data locally and only surfaces insights that indicate potential concerns, rather than sharing raw personal health information. This approach maintains privacy while providing valuable early warnings.</p>
-              </div>
+              <p>We developed a system architecture that processes health data locally and only surfaces insights that indicate potential concerns, rather than sharing raw personal health information. This approach maintains privacy while providing valuable early warnings.</p>
             </div>
-            <div class="phase-image">
-              <img src="images/HomeUI.png" alt="System architecture diagram showing local data processing and privacy protection" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+            <div class="phase-visual">
+              <img src="images/HomeUI.png" alt="System architecture diagram showing local data processing and privacy protection">
               <p class="image-caption">Privacy-first architecture with local processing and encrypted insights</p>
             </div>
           </div>
         </div>
 
         <div class="process-phase">
-          <div class="phase-content-wrapper">
+          <div class="phase-header">
+            <h3>Content Strategy & User Communication Design</h3>
+          </div>
+          <div class="phase-content">
             <div class="phase-text">
-              <div class="phase-header">
-                <h3>Content Strategy & User Communication Design</h3>
-              </div>
-              <div class="phase-content">
-                <p>As Content Writer, I developed the communication frameworks that would make complex health information accessible to stressed caregivers. This included creating clear alert messaging, designing information hierarchies that prioritize actionable insights, and developing content that reduces anxiety rather than amplifying it.</p>
-              </div>
+              <p>As Content Writer, I developed the communication frameworks that would make complex health information accessible to stressed caregivers. This included creating clear alert messaging, designing information hierarchies that prioritize actionable insights, and developing content that reduces anxiety rather than amplifying it.</p>
             </div>
-            <div class="phase-image">
-              <img src="images/Menufinal.png" alt="Content frameworks and messaging hierarchy design for caregiver communication" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+            <div class="phase-visual">
+              <img src="images/Menufinal.png" alt="Content frameworks and messaging hierarchy design for caregiver communication">
               <p class="image-caption">Content strategy frameworks for anxiety-reducing health communication</p>
             </div>
           </div>
         </div>
 
         <div class="process-phase">
-          <div class="phase-content-wrapper">
+          <div class="phase-header">
+            <h3>Early Detection Algorithm Development</h3>
+          </div>
+          <div class="phase-content">
             <div class="phase-text">
-              <div class="phase-header">
-                <h3>Early Detection Algorithm Development</h3>
-              </div>
-              <div class="phase-content">
-                <p>Developed pattern recognition capabilities that can identify subtle changes in routine, vitals, or behavior that might indicate developing health issues before they become critical.</p>
-              </div>
+              <p>Developed pattern recognition capabilities that can identify subtle changes in routine, vitals, or behavior that might indicate developing health issues before they become critical.</p>
             </div>
-            <div class="phase-image">
-              <img src="images/algorithmexample.png" alt="Flowchart showing pattern recognition and early detection algorithm logic" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+            <div class="phase-visual">
+              <img src="images/algorithmexample.png" alt="Flowchart showing pattern recognition and early detection algorithm logic">
               <p class="image-caption">Pattern recognition algorithm for early health concern detection</p>
             </div>
           </div>
@@ -367,120 +371,128 @@
           <li><strong>Early intervention focus:</strong> Prevents health crises rather than just responding to them</li>
           <li><strong>Practical implementation:</strong> Realistic technology approach suitable for real-world deployment</li>
         </ul>
-        
-        <div class="award-visual" style="margin: 2rem 0;">
-          <img src="images/recognition.jpg" alt="Heroes Top 3 Healthtech award recognition" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); margin-bottom: 1rem;">
-          <p style="font-style: italic; color: #666;">Recognition post from the Tech Innovation Jam</p>
-        </div>
-      </div>
-      
-      <div class="future-considerations">
-        <h3>Next Steps & Potential Impact</h3>
-        <ul>
-          <li>Partner with healthcare organizations for pilot testing with real caregiver-patient pairs</li>
-          <li>Develop clinical validation studies to prove early detection effectiveness</li>
-          <li>Expand privacy protection features and obtain healthcare compliance certifications</li>
-          <li>Scale solution for different care scenarios (family care, assisted living, clinical settings)</li>
-        </ul>
-      </div>
-      
-      <div class="tools-section">
-        <h3>Technologies & Tools Used</h3>
-        <div class="tools-list">
-          <span class="tool-tag">User Research</span>
-          <span class="tool-tag">Content Strategy</span>
-          <span class="tool-tag">User Interviews</span>
-          <span class="tool-tag">Content Design</span>
-          <span class="tool-tag">UX Writing</span>
-          <span class="tool-tag">Healthcare Communication</span>
-          <span class="tool-tag">User Testing</span>
-        </div>
       </div>
     </section>
 
-    <!-- Navigation to other projects -->
-    <section class="project-navigation">
-      <h2>More Projects</h2>
-      <div class="nav-projects">
-        <a href="linesofthought.html" class="nav-project-card">
-          <img src="images/LinesofThought.png" alt="Lines of Thought project">
-          <h3>Lines of Thought</h3>
-          <p>Digital gallery bridging art history and web design</p>
-        </a>
-        <a href="connectability.html" class="nav-project-card">
-          <img src="images/Connectability.png" alt="Connectability project">
-          <h3>Connectability</h3>
-          <p>UX Design for disability community platform</p>
-        </a>
-      </div>
-      
-      <div class="back-to-portfolio">
-        <a href="index.html" class="back-button">← Back to Portfolio</a>
-      </div>
-    </section>
   </main>
 
-    <footer>
-       <p>&copy; 2025 Jeanette Ahn Design</p>
-    </footer>
+<!-- Combined JavaScript for both hamburger menu and case study navigation -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Hamburger Menu JavaScript
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav_links');
+        const overlay = document.querySelector('.mobile-menu-overlay');
+        const body = document.body;
 
-    <script>
-        // Sticky navigation functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const navLinks = document.querySelectorAll('.case-nav-links .nav-link, .case-nav-links-mobile .nav-link');
-            const sections = document.querySelectorAll('section[id]');
+        // Toggle menu function
+        function toggleMenu() {
+            const isActive = hamburger.classList.contains('active');
             
-            // Function to update active nav link based on scroll position
-            function updateActiveLink() {
-                let current = '';
-                const scrollPosition = window.scrollY + 150; // Offset for header
-                
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.offsetHeight;
-                    
-                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                        current = section.getAttribute('id');
-                    }
-                });
-                
-                // Update active states for both desktop and mobile navs
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === '#' + current) {
-                        link.classList.add('active');
-                    }
-                });
+            if (isActive) {
+                closeMenu();
+            } else {
+                openMenu();
             }
+        }
+
+        function openMenu() {
+            hamburger.classList.add('active');
+            navLinks.classList.add('active');
+            overlay.classList.add('active');
+            hamburger.setAttribute('aria-expanded', 'true');
+            body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+        }
+
+        function closeMenu() {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+            overlay.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+            body.style.overflow = ''; // Restore scrolling
+        }
+
+        // Event listeners - only add if hamburger exists
+        if (hamburger) {
+            hamburger.addEventListener('click', toggleMenu);
+            overlay.addEventListener('click', closeMenu);
+
+            // Close menu when clicking on nav links
+            const navItems = document.querySelectorAll('.nav_links a');
+            navItems.forEach(item => {
+                item.addEventListener('click', closeMenu);
+            });
+
+            // Close menu on escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && hamburger.classList.contains('active')) {
+                    closeMenu();
+                }
+            });
+
+            // Close menu when window is resized to desktop size
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 767 && hamburger.classList.contains('active')) {
+                    closeMenu();
+                }
+            });
+        }
+
+        // Case Study Navigation JavaScript
+        const caseNavLinks = document.querySelectorAll('.case-nav-links .nav-link, .case-nav-links-mobile .nav-link');
+        const sections = document.querySelectorAll('section[id]');
+        
+        // Function to update active nav link based on scroll position
+        function updateActiveLink() {
+            let current = '';
+            const scrollPosition = window.scrollY + 150; // Offset for header
             
-            // Smooth scroll for navigation links
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href').substring(1);
-                    const targetSection = document.getElementById(targetId);
-                    
-                    if (targetSection) {
-                        const headerHeight = document.querySelector('header').offsetHeight;
-                        const mobileNavHeight = document.querySelector('.case-study-nav-mobile') ? 
-                            document.querySelector('.case-study-nav-mobile').offsetHeight : 0;
-                        const targetPosition = targetSection.offsetTop - headerHeight - mobileNavHeight - 20;
-                        
-                        window.scrollTo({
-                            top: targetPosition,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
             });
             
-            // Update active link on scroll
-            window.addEventListener('scroll', updateActiveLink);
-            
-            // Initial call to set active link
-            updateActiveLink();
+            // Update active states for both desktop and mobile navs
+            caseNavLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        
+        // Smooth scroll for navigation links
+        caseNavLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                
+                if (targetSection) {
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const mobileNavHeight = document.querySelector('.case-study-nav-mobile') ? 
+                        document.querySelector('.case-study-nav-mobile').offsetHeight : 0;
+                    const targetPosition = targetSection.offsetTop - headerHeight - mobileNavHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
         });
-    </script>
+        
+        // Update active link on scroll
+        window.addEventListener('scroll', updateActiveLink);
+        
+        // Initial call to set active link
+        updateActiveLink();
+    });
+</script>
 
-  </body>
+</body>
 </html>

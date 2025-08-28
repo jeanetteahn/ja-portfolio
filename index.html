@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeanette Ahn's Portfolio</title>
@@ -19,175 +20,243 @@
         <a href="#skip" class="logo-link" aria-label="Go to home section">
         <img src="images/JAlogo.png" alt="Jeanette Ahn Logo" id = "logo">
       </a>
+      
+      <!-- Add the hamburger button here -->
+      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <i class="fa fa-bars"></i>
+      </button>
+      
+      <!-- Add mobile menu overlay -->
+      <div class="mobile-menu-overlay"></div>
+      
       <nav>
         <ul class="nav_links">
           <li class="nav_item"><a href="#projects">Recent Projects</a></li>
           <li class="nav_item"><a href="#about">About</a></li>
           <li class="nav_item"><a href="#contact">Contact</a></li>
         </ul>
-    </nav>
-  </header>
+      </nav>
+    </header>
   
-  <main id="skip">
-    <section class="home">
-      <h1>Jeanette Ahn</h1>
-      <p>Graduate student crafting meaningful digital experiences from overlooked stories and systems.</p>
-      <div class="scroll-section">
-      <p class="scroll-text">See My Recent Projects</p>
-      <a href="#projects" class="scroll-arrow" aria-label="Scroll to recent projects"></a>
+    <main id="skip">
+      <section class="home">
+        <h1>Jeanette Ahn</h1>
+        <p>Graduate student crafting meaningful digital experiences for overlooked stories and systems.</p>
+        <div class="scroll-section">
+        <p class="scroll-text">See My Recent Projects</p>
+        <a href="#projects" class="scroll-arrow" aria-label="Scroll to recent projects"></a>
+        </div>
+      </section>
+
+      <h2 id = "projects">Recent Projects</h2>
+        <div class="projects">
+          <div class="card">
+            <header><h4>Connectability</h4></header>
+            <img class="mockup" src="images/Connectability.png" alt="Connectability Mockup">
+            <ul>
+              <li>Led end-to-end UX process from research to testing.</li>
+              <li>Designed a platform that streamlines event discovery for disability communities.</li>
+            </ul>
+            <!-- Connectability -->
+            <button onclick="window.open('connectability.html', '_blank')">View Case Study</button>
+          </div>
+          <div class="card">
+            <header><h4>Lines of Thought</h4></header>
+            <img class="mockup" src="images/LinesofThought.png" alt="Lines of Thought Mockup">
+            <ul>
+              <li>Curated content and built the gallery end-to-end using HTML, CSS, and JavaScript.</li>
+              <li>Created a responsive digital gallery with interactive, museum-style storytelling.</li>
+            </ul>
+            <!-- Lines of Thought -->
+            <button onclick="window.open('linesofthought.html', '_blank')">View Case Study</button>
+          </div>
+          <div class="card">
+            <header><h4>Heroes</h4></header>
+            <img class="mockup" src="images/Heroes.png" alt="Heroes Mockup">
+            <ul>
+              <li>Researched users and crafted interface copy for a conceptual older adult monitoring system.</li>
+              <li>Concept project recognized Top 3 HealthTech, 2024 Tech Jam Competition.</li>
+            </ul>
+            <!-- Heroes -->
+            <button onclick="window.open('heroes.html', '_blank')">View Case Study</button>
+          </div>
+        </div>
+
+      <h2 id="about">About</h2>
+          <div class="about"> 
+            <div class="about-content">
+              <img src="images/Me.PNG" alt="Jeanette" class="profile-image">
+              <div class="about-text">
+                <p>Hi, I'm Jeanette, a graduate student at the University of Michigan specializing in User Experience Design and Research. I explore how design 
+                can reveal hidden connections, between people, ideas, and everyday systems, by creating digital experiences that are both thoughtful and intuitive. 
+                My work blends perspectives from museums, marketing, and healthcare to bring overlooked stories to life.</p>
+              </div>
+            </div>
+
+            <h3>My Journey</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <h4>UX Design Intern</h4>
+                    <span class="timeline-company">Vaccine Genie</span>
+                    <span class="timeline-duration"> June 2025 - Present</span>
+                  </div>
+                  <p>Redesigning the user interface for a multilingual digital vaccination records app and website focusing on improving user experience and accessibility.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <h4>UX Designer and Researcher</h4>
+                    <span class="timeline-company">Braid</span>
+                    <span class="timeline-duration">Sept 2024 - Present</span>
+                  </div>
+                  <p>Designed wireframes informed by user journeys and metrics, surveyed 500+ users, and ran A/B tests to improve platform accessibility and features.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <h4>Media and Marketing Assistant (Project Manager Focus)</h4>
+                    <span class="timeline-company">Wolverine Wellness</span>
+                    <span class="timeline-duration">Sept 2024 - Present</span>
+                  </div>
+                  <p>Redesigned 15+ web pages and ran usability tests to inform UX decisions, while launching a social campaign that increased impressions by 17%.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <h4>Undergraduate Research Assistant</h4>
+                    <span class="timeline-company">University of Michigan Institute of Social Research</span>
+                    <span class="timeline-duration">Oct 2015 - May 2018</span>
+                  </div>
+                  <p>Designed and maintained three WordPress sites with a focus on user experience and visual clarity, and supported participant recruitment for research projects.</p>
+                </div>
+              </div>
+            </div>
+
+            <h3>Through My Lens</h3>
+            <p>A glimpse into my world through photography, moments and scenes captured to reflect my creative perspective. 
+              These images are a collection of my photography, showcasing the beauty and stories I find in everyday life.</p>
+            <div class="gallery">
+              <figure>
+                <img src="images/Arb.jpg" alt="Arboretum in spring">
+                <figcaption>Spring at the Arboretum</figcaption>
+              </figure>
+              <figure>
+                <img src="images/Bonfire.jpg" alt="Evening bonfire">
+                <figcaption>Evening Bonfire</figcaption>
+              </figure>
+              <figure>
+                <img src="images/Fireworks.jpg" alt="Fireworks display">
+                <figcaption>Celebratory Fireworks</figcaption>
+              </figure>
+              <figure>
+                <img src="images/Icetree.jpg" alt="Tree covered in ice">
+                <figcaption>Frozen in Time</figcaption>
+              </figure>
+              <figure>
+                <img src="images/Seville.jpg" alt="Street scene in Seville">
+                <figcaption>Exploring Seville</figcaption>
+              </figure>
+            </div>
+          </div>
+
+      <h2 id="contact">Contact</h2>
+      <p>Open to full-time opportunities starting June 2026. Let's connect.</p>
+      <div class="contact">
+          <button class="contact-button email-btn" onclick="openEmail()">
+              Email Me
+          </button>
+          <a href="https://www.linkedin.com/in/jeanetteahn/" target="_blank" class="contact-button linkedin-btn">
+              LinkedIn Profile
+          </a>
+          <a href="https://medium.com/@janette925" target="_blank" class="contact-button medium-btn">
+              Medium Articles
+          </a>
+          <a href="https://github.com/jeanetteahn" target="_blank" class="contact-button github-btn">
+              GitHub Projects
+          </a>
       </div>
-    </section>
+    </main>
 
-    <h2 id = "projects">Recent Projects</h2>
-      <div class="projects">
-        <div class="card">
-          <header><h4>Connectability</h4></header>
-          <img class="mockup" src="images/Connectability.png" alt="Connectability Mockup">
-          <ul>
-            <li>Led end-to-end UX process from research to testing.</li>
-            <li>Designed a platform that streamlines event discovery for disability communities.</li>
-          </ul>
-          <!-- Connectability -->
-          <button onclick="window.open('connectability.html', '_blank')">View Case Study</button>
-        </div>
-        <div class="card">
-          <header><h4>Lines of Thought</h4></header>
-          <img class="mockup" src="images/LinesofThought.png" alt="Lines of Thought Mockup">
-          <ul>
-            <li>Curated content and built the gallery end-to-end using HTML, CSS, and JavaScript.</li>
-            <li>Created a responsive digital gallery with interactive, museum-style storytelling.</li>
-          </ul>
-          <!-- Lines of Thought -->
-          <button onclick="window.open('linesofthought.html', '_blank')">View Case Study</button>
-        </div>
-        <div class="card">
-          <header><h4>Heroes</h4></header>
-          <img class="mockup" src="images/Heroes.png" alt="Heroes Mockup">
-          <ul>
-            <li>Researched users and crafted interface copy for a conceptual older adult monitoring system.</li>
-            <li>Concept project recognized Top 3 HealthTech, 2024 Tech Jam Competition.</li>
-          </ul>
-          <!-- Heroes -->
-          <button onclick="window.open('heroes.html', '_blank')">View Case Study</button>
-        </div>
-      </div>
+      <footer>
+         <p>&copy; 2025 Jeanette Ahn Design</p>
+      </footer>
 
-    <h2 id="about">About</h2>
-        <div class="about"> 
-          <div class="about-content">
-            <img src="images/Me.PNG" alt="Jeanette" class="profile-image">
-            <div class="about-text">
-              <p>Hi, I'm Jeanette, a graduate student at the University of Michigan specializing in User Experience Design and Research. I explore how design 
-              can reveal hidden connections—between people, ideas, and everyday systems—by creating digital experiences that are both thoughtful and intuitive. 
-              My work blends perspectives from museums, marketing, and healthcare to bring overlooked stories to life.</p>
-            </div>
-          </div>
+      <script>
+          function openEmail() {
+          window.open('mailto:jaahn@umich.edu?subject=Hello&body=Hi Jeanette,%0D%0A%0D%0A', '_blank');
+          }
 
-          <h3>My Journey</h3>
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-marker"></div>
-              <div class="timeline-content">
-                <div class="timeline-header">
-                  <h4>UX Design Intern</h4>
-                  <span class="timeline-company">Vaccine Genie</span>
-                  <span class="timeline-duration"> June 2025 - Present</span>
-                </div>
-                <p>Redesigning the user interface for a multilingual digital vaccination records app and website focusing on improving user experience and accessibility.</p>
-              </div>
-            </div>
+          // Hamburger Menu JavaScript
+          document.addEventListener('DOMContentLoaded', function() {
+              const hamburger = document.querySelector('.hamburger');
+              const navLinks = document.querySelector('.nav_links');
+              const overlay = document.querySelector('.mobile-menu-overlay');
+              const body = document.body;
 
-            <div class="timeline-item">
-              <div class="timeline-marker"></div>
-              <div class="timeline-content">
-                <div class="timeline-header">
-                  <h4>UX Designer and Researcher</h4>
-                  <span class="timeline-company">Braid</span>
-                  <span class="timeline-duration">Sept 2024 - Present</span>
-                </div>
-                <p>Designed wireframes informed by user journeys and metrics, surveyed 500+ users, and ran A/B tests to improve platform accessibility and features.</p>
-              </div>
-            </div>
+              // Toggle menu function
+              function toggleMenu() {
+                  const isActive = hamburger.classList.contains('active');
+                  
+                  if (isActive) {
+                      closeMenu();
+                  } else {
+                      openMenu();
+                  }
+              }
 
-            <div class="timeline-item">
-              <div class="timeline-marker"></div>
-              <div class="timeline-content">
-                <div class="timeline-header">
-                  <h4>Media and Marketing Assistant (Project Manager Focus)</h4>
-                  <span class="timeline-company">Wolverine Wellness</span>
-                  <span class="timeline-duration">Sept 2024 - Present</span>
-                </div>
-                <p>Redesigned 15+ web pages and ran usability tests to inform UX decisions, while launching a social campaign that increased impressions by 17%.</p>
-              </div>
-            </div>
+              function openMenu() {
+                  hamburger.classList.add('active');
+                  navLinks.classList.add('active');
+                  overlay.classList.add('active');
+                  hamburger.setAttribute('aria-expanded', 'true');
+                  body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+              }
 
-            <div class="timeline-item">
-              <div class="timeline-marker"></div>
-              <div class="timeline-content">
-                <div class="timeline-header">
-                  <h4>Undergraduate Research Assistant</h4>
-                  <span class="timeline-company">University of Michigan Institute of Social Research</span>
-                  <span class="timeline-duration">Oct 2015 - May 2018</span>
-                </div>
-                <p>Designed and maintained three WordPress sites with a focus on user experience and visual clarity, and supported participant recruitment for research projects.</p>
-              </div>
-            </div>
-          </div>
+              function closeMenu() {
+                  hamburger.classList.remove('active');
+                  navLinks.classList.remove('active');
+                  overlay.classList.remove('active');
+                  hamburger.setAttribute('aria-expanded', 'false');
+                  body.style.overflow = ''; // Restore scrolling
+              }
 
-          <h3>Through My Lens</h3>
-          <p>A glimpse into my world through photography, moments and scenes captured to reflect my creative perspective. 
-            These images are a collection of my photography, showcasing the beauty and stories I find in everyday life.</p>
-          <div class="gallery">
-            <figure>
-              <img src="images/Arb.jpg" alt="Arboretum in spring">
-              <figcaption>Spring at the Arboretum</figcaption>
-            </figure>
-            <figure>
-              <img src="images/Bonfire.jpg" alt="Evening bonfire">
-              <figcaption>Evening Bonfire</figcaption>
-            </figure>
-            <figure>
-              <img src="images/Fireworks.jpg" alt="Fireworks display">
-              <figcaption>Celebratory Fireworks</figcaption>
-            </figure>
-            <figure>
-              <img src="images/Icetree.jpg" alt="Tree covered in ice">
-              <figcaption>Frozen in Time</figcaption>
-            </figure>
-            <figure>
-              <img src="images/Seville.jpg" alt="Street scene in Seville">
-              <figcaption>Exploring Seville</figcaption>
-            </figure>
-          </div>
-        </div>
+              // Event listeners
+              hamburger.addEventListener('click', toggleMenu);
+              overlay.addEventListener('click', closeMenu);
 
-    <h2 id="contact">Contact</h2>
-    <p>I'm always open to discussing new projects or opportunities. Feel free to reach out!</p>
-    <div class="contact">
-        <button class="contact-button email-btn" onclick="openEmail()">
-            Email Me
-        </button>
-        <a href="https://www.linkedin.com/in/jeanetteahn/" target="_blank" class="contact-button linkedin-btn">
-            LinkedIn Profile
-        </a>
-        <a href="https://medium.com/@janette925" target="_blank" class="contact-button medium-btn">
-            Medium Articles
-        </a>
-        <a href="https://github.com/jeanetteahn" target="_blank" class="contact-button github-btn">
-            GitHub Projects
-        </a>
-    </div>
-  </main>
+              // Close menu when clicking on nav links (for smooth scrolling)
+              const navItems = document.querySelectorAll('.nav_links a');
+              navItems.forEach(item => {
+                  item.addEventListener('click', closeMenu);
+              });
 
-    <footer>
-       <p>&copy; 2025 Jeanette Ahn Design</p>
-    </footer>
+              // Close menu on escape key
+              document.addEventListener('keydown', function(e) {
+                  if (e.key === 'Escape' && hamburger.classList.contains('active')) {
+                      closeMenu();
+                  }
+              });
 
-    <script>
-        function openEmail() {
-            window.location.href = 'mailto:jaahn@umich.edu?subject=Hello&body=Hi Jeanette,%0D%0A%0D%0A';
-        }
-    </script>
+              // Close menu when window is resized to desktop size
+              window.addEventListener('resize', function() {
+                  if (window.innerWidth > 767 && hamburger.classList.contains('active')) {
+                      closeMenu();
+                  }
+              });
+          });
+      </script>
 
-  </body>
+    </body>
 </html>

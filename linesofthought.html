@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/case-study.css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lines of Thought - Case Study | Jeanette Ahn</title>
@@ -20,6 +21,15 @@
         <a href="index.html" class="logo-link" aria-label="Go to home">
         <img src="images/JAlogo.png" alt="Jeanette Ahn Logo" id="logo">
       </a>
+      
+      <!-- Add the hamburger button here -->
+      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <i class="fa fa-bars"></i>
+      </button>
+      
+      <!-- Add mobile menu overlay -->
+      <div class="mobile-menu-overlay"></div>
+      
       <nav>
         <ul class="nav_links">
           <li class="nav_item"><a href="index.html#projects">Recent Projects</a></li>
@@ -69,7 +79,7 @@
           </div>
           <div class="meta-item">
             <span class="meta-label">Timeline</span>
-            <span class="meta-value">March to April 2025</span>
+            <span class="meta-value">March - April 2025</span>
           </div>
           <div class="meta-item">
             <span class="meta-label">Tools</span>
@@ -97,6 +107,7 @@
       </div>
     </section>
 
+
     <!-- Process Section -->
     <section class="content-section" id="process">
       <h2>Process</h2>
@@ -108,11 +119,15 @@
             <h3>Research & Curation</h3>
           </div>
           <div class="phase-content">
-            <ul class="process-list">
-              <li>Outlined the collection, selected works, and wrote interpretive labels.</li>
-              <li>Researched historical/artistic context to ground each piece in storytelling.</li>
-              <li>Prepped and optimized images for web display.</li>
-            </ul>
+            <!-- Text content wrapped in phase-text div -->
+            <div class="phase-text">
+              <ul class="process-list">
+                <li>Outlined the collection, selected works, and wrote interpretive labels.</li>
+                <li>Researched historical/artistic context to ground each piece in storytelling.</li>
+                <li>Prepped and optimized images for web display.</li>
+              </ul>
+            </div>
+            <!-- Image content -->
             <div class="phase-visual">
               <img src="images/curation.png" alt="Collection curation and research process">
               <p class="image-caption">Curatorial research and artwork selection process</p>
@@ -126,11 +141,13 @@
             <h3>Design & Development</h3>
           </div>
           <div class="phase-content">
-            <ul class="process-list">
-              <li>Built the gallery using HTML/CSS after finding React unnecessarily complex for the scope.</li>
-              <li>Created a clean site structure to support JavaScript lightbox functionality.</li>
-              <li>Iterated on responsive layouts using flexbox and media queries for consistency across devices.</li>
-            </ul>
+            <div class="phase-text">
+              <ul class="process-list">
+                <li>Built the gallery using HTML/CSS after finding React unnecessarily complex for the scope.</li>
+                <li>Created a clean site structure to support JavaScript lightbox functionality.</li>
+                <li>Iterated on responsive layouts using flexbox and media queries for consistency across devices.</li>
+              </ul>
+            </div>
             <div class="phase-visual">
               <img src="images/mycode.png" alt="Development wireframes and code structure">
               <p class="image-caption">Site structure and responsive layout development</p>
@@ -144,12 +161,14 @@
             <h3>Refinement & Accessibility</h3>
           </div>
           <div class="phase-content">
-            <ul class="process-list">
-              <li>Debugged lightbox duplication caused by unwrapped HTML elements.</li>
-              <li>Resized logo and navigation for improved hierarchy and readability.</li>
-              <li>Passed accessibility validations and standardized formatting across pages.</li>
-              <li>Added a typewriting animation on the homepage to reinforce the theme of "lines of thought," refining cursor blinking to avoid distraction.</li>
-            </ul>
+            <div class="phase-text">
+              <ul class="process-list">
+                <li>Debugged lightbox duplication caused by unwrapped HTML elements.</li>
+                <li>Resized logo and navigation for improved hierarchy and readability.</li>
+                <li>Passed accessibility validations and standardized formatting across pages.</li>
+                <li>Added a typewriting animation on the homepage to reinforce the theme of "lines of thought," refining cursor blinking to avoid distraction.</li>
+              </ul>
+            </div>
             <div class="phase-visual">
               <img src="images/accessibility.png" alt="Accessibility testing and refinements">
               <p class="image-caption">Accessibility testing and final refinements</p>
@@ -287,9 +306,68 @@
     </footer>
 
     <script>
-        // Sticky navigation functionality
         document.addEventListener('DOMContentLoaded', function() {
-            const navLinks = document.querySelectorAll('.case-nav-links .nav-link, .case-nav-links-mobile .nav-link');
+            // Hamburger Menu JavaScript
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav_links');
+            const overlay = document.querySelector('.mobile-menu-overlay');
+            const body = document.body;
+
+            // Toggle menu function
+            function toggleMenu() {
+                const isActive = hamburger.classList.contains('active');
+                
+                if (isActive) {
+                    closeMenu();
+                } else {
+                    openMenu();
+                }
+            }
+
+            function openMenu() {
+                hamburger.classList.add('active');
+                navLinks.classList.add('active');
+                overlay.classList.add('active');
+                hamburger.setAttribute('aria-expanded', 'true');
+                body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+            }
+
+            function closeMenu() {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                overlay.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                body.style.overflow = ''; // Restore scrolling
+            }
+
+            // Event listeners - only add if hamburger exists
+            if (hamburger) {
+                hamburger.addEventListener('click', toggleMenu);
+                overlay.addEventListener('click', closeMenu);
+
+                // Close menu when clicking on nav links
+                const navItems = document.querySelectorAll('.nav_links a');
+                navItems.forEach(item => {
+                    item.addEventListener('click', closeMenu);
+                });
+
+                // Close menu on escape key
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && hamburger.classList.contains('active')) {
+                        closeMenu();
+                    }
+                });
+
+                // Close menu when window is resized to desktop size
+                window.addEventListener('resize', function() {
+                    if (window.innerWidth > 767 && hamburger.classList.contains('active')) {
+                        closeMenu();
+                    }
+                });
+            }
+
+            // Case Study Navigation JavaScript
+            const caseNavLinks = document.querySelectorAll('.case-nav-links .nav-link, .case-nav-links-mobile .nav-link');
             const sections = document.querySelectorAll('section[id]');
             
             // Function to update active nav link based on scroll position
@@ -307,7 +385,7 @@
                 });
                 
                 // Update active states for both desktop and mobile navs
-                navLinks.forEach(link => {
+                caseNavLinks.forEach(link => {
                     link.classList.remove('active');
                     if (link.getAttribute('href') === '#' + current) {
                         link.classList.add('active');
@@ -316,7 +394,7 @@
             }
             
             // Smooth scroll for navigation links
-            navLinks.forEach(link => {
+            caseNavLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
                     const targetId = this.getAttribute('href').substring(1);

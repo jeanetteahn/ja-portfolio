@@ -9,17 +9,29 @@
     <link rel="stylesheet" type="text/css" href="css/case-study.css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+    <!-- ADD THIS LINE - Font Awesome for hamburger icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ConnectAbility - Case Study | Jeanette Ahn</title>
   </head>
   <body class="case-study-page">
    
+    <!-- UPDATED HEADER with hamburger menu structure -->
     <header>
        <a class="skip" href="#skip">Skip to Main Content</a>
         <a href="index.html" class="logo-link" aria-label="Go to home">
         <img src="images/JAlogo.png" alt="Jeanette Ahn Logo" id="logo">
       </a>
+      
+      <!-- ADD hamburger button -->
+      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <i class="fa fa-bars"></i>
+      </button>
+      
+      <!-- ADD mobile menu overlay -->
+      <div class="mobile-menu-overlay"></div>
+      
       <nav>
         <ul class="nav_links">
           <li class="nav_item"><a href="index.html#projects">Recent Projects</a></li>
@@ -148,7 +160,11 @@
             <h3>Storyboarding & Ideation</h3>
           </div>
           <div class="phase-content">
-            <p>I explored multiple formats (website vs. mobile app) and visualized user scenarios through storyboards. This process clarified how different touchpoints could address accessibility needs and user priorities.</p>
+            <!-- Text content wrapped in phase-text div -->
+            <div class="phase-text">
+              <p>I explored multiple formats (website vs. mobile app) and visualized user scenarios through storyboards. This process clarified how different touchpoints could address accessibility needs and user priorities.</p>
+            </div>
+            <!-- Image content -->
             <div class="phase-visual">
               <img src="images/storyboards.png" alt="ConnectAbility user storyboards and initial ideation sketches">
               <p class="image-caption">User storyboards exploring different scenarios and platform formats</p>
@@ -162,13 +178,15 @@
             <h3>Personas & Journey Mapping</h3>
           </div>
           <div class="phase-content">
-            <p>Developed three key personas capturing different user perspectives:</p>
-            <ul class="persona-list">
-              <li><strong>Person with a disability</strong> - Direct user seeking accessible events</li>
-              <li><strong>Caregiver</strong> - Professional seeking resources for clients</li>
-              <li><strong>Family member</strong> - Parent or relative coordinating activities</li>
-            </ul>
-            <p>Used Miro to map user journeys with color-coded Post-its, synthesizing common needs such as simplified search, trustworthy content, and reduced cognitive load.</p>
+            <div class="phase-text">
+              <p>Developed three key personas capturing different user perspectives:</p>
+              <ul class="persona-list">
+                <li><strong>Person with a disability</strong> - Direct user seeking accessible events</li>
+                <li><strong>Caregiver</strong> - Professional seeking resources for clients</li>
+                <li><strong>Family member</strong> - Parent or relative coordinating activities</li>
+              </ul>
+              <p>Used Miro to map user journeys with color-coded Post-its, synthesizing common needs such as simplified search, trustworthy content, and reduced cognitive load.</p>
+            </div>
             <div class="phase-visual">
               <img src="images/userjourney.png" alt="Three user personas and journey mapping visualization">
               <p class="image-caption">User personas and journey mapping process using Miro with color-coded insights</p>
@@ -182,17 +200,19 @@
             <h3>Prototyping & Testing</h3>
           </div>
           <div class="phase-content">
-            <div class="testing-approach">
-              <p>My iterative approach included:</p>
-              <ul>
-                <li>Started with paper sketches to explore layout concepts</li>
-                <li>Moved to low-fidelity digital wireframes in Figma</li>
-                <li>Conducted usability testing with family members of individuals with disabilities</li>
-              </ul>
-            </div>
-            <div class="key-finding">
-              <h4>🔍 Key Testing Insight</h4>
-              <p>Users wanted reassurance about credibility and trustworthiness. This feedback directly led to adding an <strong>About page</strong> to communicate the platform's mission and build user confidence.</p>
+            <div class="phase-text">
+              <div class="testing-approach">
+                <p>My iterative approach included:</p>
+                <ul>
+                  <li>Started with paper sketches to explore layout concepts</li>
+                  <li>Moved to low-fidelity digital wireframes in Figma</li>
+                  <li>Conducted usability testing with family members of individuals with disabilities</li>
+                </ul>
+              </div>
+              <div class="key-finding">
+                <h4>🔍 Key Testing Insight</h4>
+                <p>Users wanted reassurance about credibility and trustworthiness. This feedback directly led to adding an <strong>About page</strong> to communicate the platform's mission and build user confidence.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -243,7 +263,7 @@
 
         <div class="prototype-visuals">
           <div class="visual-demo">
-            <img src="images/Annotatedwireframes.png" alt="Annotated wireframes showing key features and accessibility considerations">
+            <img src="images/annotatedwireframes.png" alt="Annotated wireframes showing key features and accessibility considerations">
             <p class="image-caption">Key screens highlighting search functionality, calendar view, and accessibility features</p>
           </div>
         </div>
@@ -370,9 +390,68 @@
     </footer>
 
     <script>
-        // Sticky navigation functionality
+        // Hamburger Menu JavaScript + Case Study Navigation
         document.addEventListener('DOMContentLoaded', function() {
-            const navLinks = document.querySelectorAll('.case-nav-links .nav-link, .case-nav-links-mobile .nav-link');
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav_links');
+            const overlay = document.querySelector('.mobile-menu-overlay');
+            const body = document.body;
+
+            // Toggle menu function
+            function toggleMenu() {
+                const isActive = hamburger.classList.contains('active');
+                
+                if (isActive) {
+                    closeMenu();
+                } else {
+                    openMenu();
+                }
+            }
+
+            function openMenu() {
+                hamburger.classList.add('active');
+                navLinks.classList.add('active');
+                overlay.classList.add('active');
+                hamburger.setAttribute('aria-expanded', 'true');
+                body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+            }
+
+            function closeMenu() {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                overlay.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                body.style.overflow = ''; // Restore scrolling
+            }
+
+            // Event listeners - only add if hamburger exists
+            if (hamburger) {
+                hamburger.addEventListener('click', toggleMenu);
+                overlay.addEventListener('click', closeMenu);
+
+                // Close menu when clicking on nav links
+                const navItems = document.querySelectorAll('.nav_links a');
+                navItems.forEach(item => {
+                    item.addEventListener('click', closeMenu);
+                });
+
+                // Close menu on escape key
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && hamburger.classList.contains('active')) {
+                        closeMenu();
+                    }
+                });
+
+                // Close menu when window is resized to desktop size
+                window.addEventListener('resize', function() {
+                    if (window.innerWidth > 767 && hamburger.classList.contains('active')) {
+                        closeMenu();
+                    }
+                });
+            }
+
+            // Case Study Navigation functionality
+            const caseNavLinks = document.querySelectorAll('.case-nav-links .nav-link, .case-nav-links-mobile .nav-link');
             const sections = document.querySelectorAll('section[id]');
             
             // Function to update active nav link based on scroll position
@@ -390,7 +469,7 @@
                 });
                 
                 // Update active states for both desktop and mobile navs
-                navLinks.forEach(link => {
+                caseNavLinks.forEach(link => {
                     link.classList.remove('active');
                     if (link.getAttribute('href') === '#' + current) {
                         link.classList.add('active');
@@ -399,7 +478,7 @@
             }
             
             // Smooth scroll for navigation links
-            navLinks.forEach(link => {
+            caseNavLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
                     const targetId = this.getAttribute('href').substring(1);
@@ -424,6 +503,62 @@
             
             // Initial call to set active link
             updateActiveLink();
+
+            // Lightbox functionality for images
+            // Create lightbox HTML structure
+            const lightboxHTML = `
+                <div id="lightbox" class="lightbox">
+                    <span class="lightbox-close">&times;</span>
+                    <img class="lightbox-content" id="lightbox-img">
+                    <div id="lightbox-caption" class="lightbox-caption"></div>
+                </div>
+            `;
+            
+            // Add lightbox to the page
+            document.body.insertAdjacentHTML('beforeend', lightboxHTML);
+            
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            const closeBtn = document.querySelector('.lightbox-close');
+            
+            // Add click listeners to all images in visual-demo sections
+            const visualDemoImages = document.querySelectorAll('.visual-demo img');
+            
+            visualDemoImages.forEach(function(img) {
+                img.addEventListener('click', function() {
+                    lightbox.style.display = 'block';
+                    lightboxImg.src = this.src;
+                    lightboxImg.alt = this.alt;
+                    
+                    // Get caption from the image caption element if it exists
+                    const captionElement = this.parentElement.querySelector('.image-caption');
+                    if (captionElement) {
+                        lightboxCaption.textContent = captionElement.textContent;
+                    } else {
+                        lightboxCaption.textContent = this.alt || '';
+                    }
+                });
+            });
+            
+            // Close lightbox when clicking the X button
+            closeBtn.addEventListener('click', function() {
+                lightbox.style.display = 'none';
+            });
+            
+            // Close lightbox when clicking outside the image
+            lightbox.addEventListener('click', function(e) {
+                if (e.target === lightbox) {
+                    lightbox.style.display = 'none';
+                }
+            });
+            
+            // Close lightbox with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && lightbox.style.display === 'block') {
+                    lightbox.style.display = 'none';
+                }
+            });
         });
     </script>
 
