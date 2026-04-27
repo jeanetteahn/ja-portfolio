@@ -1,0 +1,162 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/starter.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="images/JAlogo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground - Jeanette Ahn's Portfolio</title>
+       <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "t2obouij62");
+    </script>
+
+  </head>
+  <body class="case-study-page">
+
+    <header>
+       <a class = "skip" href="#skip">Skip to Main Content</a>
+        <a href="index.html" class="logo-link" aria-label="Go to home page">
+        <img src="images/JAlogo.png" alt="Jeanette Ahn Logo" id = "logo">
+      </a>
+
+      <!-- Add the hamburger button here -->
+      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <i class="fa fa-bars"></i>
+      </button>
+
+      <!-- Add mobile menu overlay -->
+      <div class="mobile-menu-overlay"></div>
+
+      <nav>
+        <ul class="nav_links">
+          <li class="nav_item"><a href="index.html#projects">Recent Projects</a></li>
+          <li class="nav_item"><a href="index.html#playground">Playground</a></li>
+          <li class="nav_item"><a href="index.html#about">About</a></li>
+          <li class="nav_item"><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="skip">
+      <h2 id="playground">Playground</h2>
+      
+      <div class="playground-section">
+        <p>A collection of graphic design, data projects, visual experiments, and additional case studies.</p>
+      </div>
+
+      <h3 style="text-align: center; color: #34568B; font-size: 1.8rem; margin: 40px 0 30px 0;">Graphic Design</h3>
+      
+      <div class="projects">
+        <div class="card">
+          <header><h4>Wolverine Wellness Banner</h4></header>
+          <img class="mockup" src="images/Bannermockup.png" alt="Project description">
+          <ul>
+            <li>Designed retractable banner about Wellness Coaching</li>
+            <li>Displayed at 5+ outreach events</li>
+          </ul>
+          <button onclick="window.open('wolverinewellness.html', '_blank')">View Project</button>
+        </div>
+         <div class="card">
+        <header><h4>Michigan Aquaponics Banner</h4></header>
+          <img class="mockup" src="images/MichiganAquaponics.png" alt="Project description">
+          <ul>
+            <li>Designed banner for the club's cabin</li>
+            <li>Placed at the front of the cabin as a visual identifier, seen by 10+ members</li>
+          </ul>
+          <button onclick="window.open('michiganaquaponics.html', '_blank')">View Project</button>
+          </div>
+
+           <div class="card">
+        <header><h4>Saffron & More Visual Identity</h4></header>
+          <img class="mockup" src="images/SaffronandMore.png" alt="Project description">
+          <ul>
+            <li>Created a visual identity guide defining color palette, typography, and usage guidelines</li>
+            <li>Designed 5+ wireframes based on the visual identity</li>
+          </ul>
+          <button onclick="window.open('saffronandmore.html', '_blank')">View Project</button>
+          </div>
+
+      </div>
+
+        <!-- Add more cards as needed -->
+        
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Jeanette Ahn Design</p>
+    </footer>
+
+    <script>
+      // Hamburger Menu JavaScript
+      document.addEventListener('DOMContentLoaded', function() {
+          const hamburger = document.querySelector('.hamburger');
+          const navLinks = document.querySelector('.nav_links');
+          const overlay = document.querySelector('.mobile-menu-overlay');
+          const body = document.body;
+
+          // Toggle menu function
+          function toggleMenu() {
+              const isActive = hamburger.classList.contains('active');
+              
+              if (isActive) {
+                  closeMenu();
+              } else {
+                  openMenu();
+              }
+          }
+
+          function openMenu() {
+              hamburger.classList.add('active');
+              navLinks.classList.add('active');
+              overlay.classList.add('active');
+              hamburger.setAttribute('aria-expanded', 'true');
+              body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+          }
+
+          function closeMenu() {
+              hamburger.classList.remove('active');
+              navLinks.classList.remove('active');
+              overlay.classList.remove('active');
+              hamburger.setAttribute('aria-expanded', 'false');
+              body.style.overflow = ''; // Restore scrolling
+          }
+
+          // Event listeners
+          hamburger.addEventListener('click', toggleMenu);
+          overlay.addEventListener('click', closeMenu);
+
+          // Close menu when clicking on nav links (for smooth scrolling)
+          const navItems = document.querySelectorAll('.nav_links a');
+          navItems.forEach(item => {
+              item.addEventListener('click', closeMenu);
+          });
+
+          // Close menu on escape key
+          document.addEventListener('keydown', function(e) {
+              if (e.key === 'Escape' && hamburger.classList.contains('active')) {
+                  closeMenu();
+              }
+          });
+
+          // Close menu when window is resized to desktop size
+          window.addEventListener('resize', function() {
+              if (window.innerWidth > 767 && hamburger.classList.contains('active')) {
+                  closeMenu();
+              }
+          });
+      });
+    </script>
+
+  </body>
+</html>
