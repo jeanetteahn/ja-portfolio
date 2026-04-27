@@ -1,5 +1,5 @@
 # ja-portfolio
-This repository contains my personal portfolio website — a curated showcase of design, UX, and creative projects.
+This repository contains my personal portfolio website, a curated showcase of UX projects.
 
 🛠 **Built with**
 - HTML / CSS / JavaScript
